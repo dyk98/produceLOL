@@ -3,13 +3,20 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import '../node_modules/swiper/dist/css/swiper.css'
 
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
+// let router = new VueRouter({
+// //   mode:'history',
+// //   routes: router
+// // })
+
 new Vue({
   el: '#app',
   router,
   components: { App },
   template: '<App/>'
 })
+
