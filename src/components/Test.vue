@@ -4,7 +4,9 @@
       <h2 class="head"><img src="../assets/img/head.png" alt=""></h2>
       <ul>
         <li>
-          <img src="../assets/img/head.png" alt="">
+          <span>
+            <img src="../assets/img/head.png" alt="">
+          </span>
           <p>账号</p>
         </li>
         <li>
@@ -24,6 +26,7 @@
           <p>退出登录</p>
         </li>
       </ul>
+
     </nav>
 
     <main id="panel">
@@ -94,6 +97,10 @@
     list-style: none;
     height: 40px;
   }
+  /*#menu ul li span{*/
+    /*display: inline-block;*/
+    /*vertical-align: middle;*/
+  /*}*/
   #menu ul li p {
     margin: 0;
     height: 40px;
@@ -101,12 +108,12 @@
     display: inline-block;
   }
   #menu ul li img {
-    height: 24px;
-    width: 24px;
+    height: 20px;
+    width: 20px;
     /*line-height: 24px;*/
     /*margin-top: 10px;*/
     display: inline-block;
-    vertical-align: center;
+    vertical-align: middle;
   }
 
 

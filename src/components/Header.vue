@@ -7,7 +7,7 @@
         <!--{{msg}}-->
       <!--</p>-->
       <router-link tag="div" to="/" class="leftDiv">
-        <img src="/static/back.png" alt="" class="head_left">
+        <img src="../assets/img/back.png" alt="" class="head_left">
       </router-link>
       <img :src="game" alt="" class="game_name">
       <router-link tag="div" to="/ChangeGame" class="rightDiv">
