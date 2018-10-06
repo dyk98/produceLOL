@@ -1,54 +1,54 @@
 <template>
-    <div id="content">
-      <router-link to="/Test" class="head">
-        <img src="../assets/img/head.png" alt="">
-      </router-link>
-      <!--<p>-->
-        <!--{{msg}}-->
-      <!--</p>-->
-      <router-link tag="div" to="/" class="leftDiv">
-        <img src="../assets/img/back.png" alt="" class="head_left">
-      </router-link>
-      <img :src="game" alt="" class="game_name">
-      <router-link tag="div" to="/ChangeGame" class="rightDiv">
-        <img src="../assets/img/right.png" alt="" class="head_right">
-      </router-link>
-      <a href="" class="select">
-        <img src="../assets/img/search.png" alt="">
-      </a>
-      <!-- 栏目 -->
-      <div class="column">
-        <ul >
-          <router-link tag="li" to="/" :class="hot">热点</router-link>
-          <router-link tag="li" to="/HomeMsg" :class="imf">资讯</router-link>
-          <router-link tag="li" to="/Guide" :class="gui">攻略</router-link>
-          <router-link tag="li" to="/Entertainment" :class="ent">娱乐</router-link>
-          <router-link tag="li" to="/Product" :class="pro">周边</router-link>
-        </ul>
-      </div>
-
+  <div id="content">
+    <router-link to="/Person" class="head">
+      <img src="../assets/img/head.png" alt="">
+    </router-link>
+    <!--<p>-->
+    <!--{{msg}}-->
+    <!--</p>-->
+    <router-link tag="div" to="/" class="leftDiv">
+      <img src="../assets/img/back.png" alt="" class="head_left">
+    </router-link>
+    <img :src="game" alt="" class="game_name">
+    <router-link tag="div" to="/ChangeGame" class="rightDiv">
+      <img src="../assets/img/right.png" alt="" class="head_right">
+    </router-link>
+    <a href="" class="select">
+      <img src="../assets/img/search.png" alt="">
+    </a>
+    <!-- 栏目 -->
+    <div class="column">
+      <ul >
+        <router-link tag="li" to="/" :class="hot">热点</router-link>
+        <router-link tag="li" to="/HomeMsg" :class="imf">资讯</router-link>
+        <router-link tag="li" to="/Guide" :class="gui">攻略</router-link>
+        <router-link tag="li" to="/Entertainment" :class="ent">娱乐</router-link>
+        <router-link tag="li" to="/Product" :class="pro">周边</router-link>
+      </ul>
     </div>
+
+  </div>
 </template>
 
 <script>
-    export default {
-      name: "Header",
-      props: {
-        'msg': String,
-        'hot': String,
-        'imf': String,
-        'gui': String,
-        'ent': String,
-        'pro': String,
-        'game':String
-      }
+  export default {
+    name: "Header",
+    props: {
+      'msg': String,
+      'hot': String,
+      'imf': String,
+      'gui': String,
+      'ent': String,
+      'pro': String,
+      'game':String
     }
+  }
 </script>
 
 <style scoped>
   .column {
     background-color: white;
-    z-index: 999;
+    z-index: 998;
     margin-top: 3.4rem;
     width: 100%;
   }
@@ -138,10 +138,5 @@
     top: 20px;
     left: 32%;
   }
-
-
-
-
-
 
 </style>

@@ -50,10 +50,10 @@
       name: "Discuss",
       data() {
         return {
-          home_gol:'/static/home.png',
-          gol:'/static/discuss1.png',
-          match_gol:'/static/match.png',
-          data_gol:'/static/data.png',
+          home_gol : require('../../assets/img/home.png'),
+          gol : require('../../assets/img/discuss1.png'),
+          match_gol : require('../../assets/img/match.png'),
+          data_gol : require('../../assets/img/data.png'),
         }
       },
       methods: {

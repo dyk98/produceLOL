@@ -5,24 +5,24 @@
       <ul>
         <li>
           <span>
-            <img src="../assets/img/head.png" alt="">
+            <img src="../assets/img/person.png" alt="">
           </span>
           <p>账号</p>
         </li>
         <li>
-          <img src="" alt="">
+          <img src="../assets/img/msg.png" alt="">
           <p>消息管理</p>
         </li>
         <li>
-          <img src="" alt="">
+          <img src="../assets/img/eye.png" alt="">
           <p>我的关注</p>
         </li>
         <li>
-          <img src="" alt="">
+          <img src="../assets/img/send.png" alt="">
           <p>发布中心</p>
         </li>
         <li>
-          <img src="" alt="">
+          <img src="../assets/img/out1.png" alt="">
           <p>退出登录</p>
         </li>
       </ul>

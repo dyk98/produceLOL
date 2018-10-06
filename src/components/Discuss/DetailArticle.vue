@@ -3,7 +3,7 @@
       <div class="header">
         <div class="header_top">
           <router-link class="back" to="/DiscussDetail">
-            <img src="/static/back.png" alt="">
+            <img src="../../assets/img/back.png" alt="">
           </router-link>
           <p>
             Rng粉丝鸭血汤
@@ -42,8 +42,8 @@
             <span class="guide_like">
             458
             </span>
-            <img src="/static/like.png" alt="" class="guide_comment" v-show="isShow" @click="toggle">
-            <img src="/static/like1.png" alt="" class="guide_comment" v-show="!isShow" @click="toggle">
+            <img src="../../assets/img/like.png" alt="" class="guide_comment" v-show="isShow" @click="toggle">
+            <img src="../../assets/img/like1.png" alt="" class="guide_comment" v-show="!isShow" @click="toggle">
           </div>
         </div>
       </div>
@@ -77,8 +77,8 @@
               <span class="guide_like">
               458
               </span>
-              <img src="/static/like.png" alt="" class="guide_comment" v-show="isShow" @click="toggle">
-              <img src="/static/like1.png" alt="" class="guide_comment" v-show="!isShow" @click="toggle">
+              <img src="../../assets/img/like.png" alt="" class="guide_comment" v-show="isShow" @click="toggle">
+              <img src="../../assets/img/like1.png" alt="" class="guide_comment" v-show="!isShow" @click="toggle">
             </div>
           </div>
           <div class="comment_again">
@@ -116,8 +116,8 @@
             <span class="guide_like">
             458
             </span>
-              <img src="/static/like.png" alt="" class="guide_comment" v-show="isShow" @click="toggle">
-              <img src="/static/like1.png" alt="" class="guide_comment" v-show="!isShow" @click="toggle">
+              <img src="../../assets/img/like.png" alt="" class="guide_comment" v-show="isShow" @click="toggle">
+              <img src="../../assets/img/like1.png" alt="" class="guide_comment" v-show="!isShow" @click="toggle">
             </div>
           </div>
           <div class="comment_again">

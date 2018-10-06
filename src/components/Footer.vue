@@ -5,7 +5,7 @@
         <router-link tag="li" class="left" to="/Discuss"><img :src="discuss_gol" alt=""></router-link>
         <router-link tag="li" id="rng" to="/Competition"><img src="../assets/img/omg/omg.png" alt="" class="rng" :class="{'active':gol}"></router-link>
         <router-link tag="li" class="right" to="/VideoHome"><img :src="match_gol" alt=""></router-link>
-        <li><img :src="data_gol" alt=""></li>
+        <router-link tag="li" to="/Data"><img :src="data_gol" alt=""></router-link>
       </ul>
     </div>
 </template>

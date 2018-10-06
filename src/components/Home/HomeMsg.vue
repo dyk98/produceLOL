@@ -31,11 +31,11 @@
         return {
           homemsg: '资讯',
           imf:'active',
-          gol:'/static/home1.png',
-          discuss_gol:'/static/discuss.png',
-          match_gol:'/static/match.png',
-          data_gol:'/static/data.png',
-          game:'/static/lol.png'
+          discuss_gol : require('../../assets/img/discuss.png'),
+          gol : require('../../assets/img/home1.png'),
+          match_gol : require('../../assets/img/match.png'),
+          data_gol : require('../../assets/img/data.png'),
+          game : require('../../assets/img/lol.png'),
         }
       }
     }

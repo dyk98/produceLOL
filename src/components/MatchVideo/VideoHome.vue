@@ -103,10 +103,10 @@
     },
     data() {
       return {
-        home_gol:'/static/home.png',
-        discuss_gol:'/static/discuss.png',
-        match_gol:'/static/match1.png',
-        data_gol:'/static/data.png',
+        home_gol : require('../../assets/img/home.png'),
+        discuss_gol : require('../../assets/img/discuss.png'),
+        match_gol : require('../../assets/img/match1.png'),
+        data_gol : require('../../assets/img/data.png'),
       }
     },
     mounted(){

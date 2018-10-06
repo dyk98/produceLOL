@@ -3,11 +3,14 @@
       <div class="header">
         <div class="header_top">
           <router-link class="back" to="/Discuss">
-            <img src="/static/back.png" alt="">
+            <img src="../../assets/img/back.png" alt="">
           </router-link>
           <p>
             Rng粉丝鸭血汤
           </p>
+          <router-link class="add" to="/ArticleAdd" tag="div">
+            <img src="../../assets/img/add.png" alt="">
+          </router-link>
         </div>
         <div class="header_center">
           <img src="../../assets/img/rng.png" alt="">
@@ -46,10 +49,10 @@
           isBlack: false,
           // _btnInner:'关注'
           ro: false,
-          home_gol:'/static/home.png',
-          gol:'/static/discuss1.png',
-          match_gol:'/static/match.png',
-          data_gol:'/static/data.png',
+          home_gol : require('../../assets/img/home.png'),
+          gol : require('../../assets/img/discuss1.png'),
+          match_gol : require('../../assets/img/match.png'),
+          data_gol : require('../../assets/img/data.png'),
         }
       },
       methods: {
@@ -97,6 +100,22 @@
     position: fixed;
     left: 0.625rem;
     top: 0.7rem;
+    padding: 4px;
+  }
+  .header .add {
+    width: 1.8rem;
+    height: 1.8rem;
+    position: fixed;
+    right: 0.625rem;
+    top: 0.65rem;
+  }
+  .header .add img {
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius:50%;
+    position: fixed;
+    right: 0.625rem;
+    top: 0.65rem;
     padding: 4px;
   }
   .header p {
