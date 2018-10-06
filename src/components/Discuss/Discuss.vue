@@ -2,7 +2,7 @@
   <div class="page">
     <div class="header">
       <a href="" class="head">
-        <img src="../assets/img/head.png" alt="">
+        <img src="../../assets/img/head.png" alt="">
       </a>
       <p>
         圈子
@@ -10,19 +10,19 @@
     </div>
     <div id="content">
       <div class="search">
-        <input type="text" value="" id="input_search">
-        <img src="../assets/img/search.png" alt="" class="search_left">
-        <img src="../assets/img/out.png" alt="" class="search_right" @click="clear">
+        <input type="text" value="" id="input_search" placeholder="搜索一下">
+        <img src="../../assets/img/search.png" alt="" class="search_left">
+        <img src="../../assets/img/out.png" alt="" class="search_right" @click="clear">
       </div>
       <div class="discuss">
         <p>我的关注</p>
         <ul>
           <router-link tag="li" to="/DiscussDetail">
-            <img src="../assets/img/rng.png" alt="">
+            <img src="../../assets/img/rng.png" alt="">
             <span>RNG</span>
           </router-link>
           <router-link tag="li" to="/DiscussDetail">
-            <img src="../assets/img/omg/omg.png" alt="">
+            <img src="../../assets/img/omg/omg.png" alt="">
             <span>OMG</span>
           </router-link>
           <li></li>

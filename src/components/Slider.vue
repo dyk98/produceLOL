@@ -8,6 +8,7 @@
         <img src="../assets/img/2.png" alt="">
       </div>
     </div>
+    <div class="swiper-pagination"></div>
   </div>
 </template>
 
@@ -18,7 +19,10 @@
       mounted(){
         var mySwiper = new Swiper('.swiper-container', {
           autoplay:true,
-          loop:true
+          loop:true,
+          pagination: {
+            el: '.swiper-pagination',
+          },
         })
       }
     }

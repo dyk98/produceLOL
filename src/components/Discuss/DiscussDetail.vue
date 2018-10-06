@@ -10,17 +10,30 @@
           </p>
         </div>
         <div class="header_center">
-          <img src="../assets/img/rng.png" alt="">
+          <img src="../../assets/img/rng.png" alt="">
           <p>发帖量348</p>
           <p class="p_bottom">关注人数4563</p>
           <button @click="toggle()" ref="btn" :class="{'black':isBlack,'golden':!isBlack}" v-model="btnInner">
             {{btnInner}}
           </button>
         </div>
+        <div class="search">
+          <input type="text" value="" id="input_search">
+          <img src="../../assets/img/search.png" alt="" class="search_left">
+          <img src="../../assets/img/out.png" alt="" class="search_right" @click="clear">
+        </div>
       </div>
       <div class="content">
-
+        <div class="column">
+          <router-link to="/DiscussDetail/DiscussAll" :class="{'line':!ro}" @click.native="active">全部</router-link>
+          <router-link to="/DiscussDetail/DiscussWell" :class="{'line':ro}" @click.native="active">精选</router-link>
+          <!--<router-link>精选</router-link>-->
+        </div>
+        <div>
+          <router-view></router-view>
+        </div>
       </div>
+      <Footer :discuss_gol="gol" :home_gol="home_gol" :match_gol="match_gol" :data_gol="data_gol"></Footer>
     </div>
 </template>
 
@@ -32,6 +45,11 @@
           btnInner:'已关注',
           isBlack: false,
           // _btnInner:'关注'
+          ro: false,
+          home_gol:'/static/home.png',
+          gol:'/static/discuss1.png',
+          match_gol:'/static/match.png',
+          data_gol:'/static/data.png',
         }
       },
       methods: {
@@ -42,12 +60,27 @@
           }else if (this.isBlack === false){
             this.btnInner = '已关注'
           }
+        },
+        clear() {
+          document.getElementById('input_search').value = "";
+          document.getElementById('input_search').focus();
+        },
+        active(){
+          if (this.$route.name === 'DiscussWell') {
+            this.ro = true
+          }else {
+            this.ro = false
+          }
         }
       }
     }
 </script>
 
 <style scoped>
+  .page {
+    width: 100%;
+    height: 100%;
+  }
   .header{
     height: 3.4375rem;
     width: 100%;
@@ -98,7 +131,7 @@
     position: absolute;
     right: 3%;
     top: 25px;
-    width: 17.2%;
+    width: 20%;
     height: 30px;
     background-color: white;
     box-shadow: none;
@@ -112,5 +145,50 @@
   .black {
     color: black;
     border: 1px solid #AAAAAA;
+  }
+  .header .search {
+    height: 35px;
+    /*margin-top: 55px;*/
+    text-align: center;
+  }
+  .header .search input {
+    border: 1px solid #d7d7d7;
+    width: 86%;
+    height: 30px;
+    outline: none;
+    border-radius: 5px;
+    padding-left: 9%;
+  }
+  .header .search img {
+    width: 15px;
+    height: 15px;
+  }
+  .header .search .search_left {
+    position: absolute;
+    margin-top: 10px;
+    left: 5%;
+  }
+  .header .search .search_right {
+    position: absolute;
+    margin-top: 10px;
+    /*top: 65px;*/
+    right: 5%;
+  }
+  .content .column  {
+    margin-top: 175px;
+    border-bottom: 5px solid #f5f5f5;
+    padding-bottom: 5px;
+    height: 30px;
+    padding-top: 10px;
+  }
+  .content .column a {
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+    margin-left: 3%;
+    padding-bottom: 3px;
+  }
+  .line {
+    border-bottom: 3px solid #b99d6f;
   }
 </style>

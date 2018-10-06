@@ -3,8 +3,8 @@
       <ul class="bottom">
         <router-link tag="li" to="/"><img :src="home_gol" alt=""></router-link>
         <router-link tag="li" class="left" to="/Discuss"><img :src="discuss_gol" alt=""></router-link>
-        <li id="rng"><img src="../assets/img/omg/omg.png" alt="" class="rng" @click="change()" ref="rng"></li>
-        <li class="right"><img :src="match_gol" alt=""></li>
+        <router-link tag="li" id="rng" to="/Competition"><img src="../assets/img/omg/omg.png" alt="" class="rng" :class="{'active':gol}"></router-link>
+        <router-link tag="li" class="right" to="/VideoHome"><img :src="match_gol" alt=""></router-link>
         <li><img :src="data_gol" alt=""></li>
       </ul>
     </div>
@@ -22,12 +22,16 @@
         'home_gol': String,
         'discuss_gol': String,
         'match_gol': String,
-        'data_gol': String
+        'data_gol': String,
+        'gol':Boolean,
       }
     }
 </script>
 
 <style scoped>
+  .active {
+    border: 1px solid #b99d6f;
+  }
   #footer {
     height: 3.3rem;
     width: 100%;
@@ -59,13 +63,15 @@
     border-radius: 50%;
     width: 50px;
     height: 50px;
+    background-color: white;
+  }
+  .rng {
     border: 1px solid #cdcdcd;
   }
   #footer .bottom #rng {
     position: fixed;
     bottom: 3px;
     left: 44%;
-    background-color: white;
   }
   #footer .bottom .left {
     padding-right: 10%;

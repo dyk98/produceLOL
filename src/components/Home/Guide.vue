@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-    <Header :msg="guide" :gui="gui"></Header>
+    <Header :game="game" :gui="gui"></Header>
     <div class="content">
       <!-- 攻略 -->
       <div class="guide">
@@ -9,9 +9,9 @@
           <p class="guide_content">一谈到中单剑圣，许多人都会想起曾经的AP剑圣adadasdassdasd</p>
         </div>
         <div class="guide_center">
-          <img src="../assets/img/guide_1.jpg" alt="">
-          <img src="../assets/img/guide_2.jpg" alt="">
-          <img src="../assets/img/guide_3.jpg" alt="">
+          <img src="../../assets/img/guide_1.jpg" alt="">
+          <img src="../../assets/img/guide_2.jpg" alt="">
+          <img src="../../assets/img/guide_3.jpg" alt="">
         </div>
         <div class="guide_bottom">
           <span class="guide_time">
@@ -21,14 +21,14 @@
             <span class="guide_comment">
             458
             </span>
-            <img src="../assets/img/comment.png" alt="" class="guide_comment">
+            <img src="../../assets/img/comment.png" alt="" class="guide_comment">
             <!--<img src="../assets/img/like.png" alt="">-->
           </div>
           <div class="guide_like">
             <span class="guide_like">
             458
             </span>
-            <img src="../assets/img/like.png" alt="" class="guide_comment">
+            <img src="../../assets/img/like.png" alt="" class="guide_comment">
             <!--<img src="../assets/img/like.png" alt="">-->
           </div>
         </div>
@@ -39,9 +39,9 @@
           <p class="guide_content">一谈到中单剑圣，许多人都会想起曾经的AP剑圣adadasdassdasd</p>
         </div>
         <div class="guide_center">
-          <img src="../assets/img/guide_1.jpg" alt="">
-          <img src="../assets/img/guide_2.jpg" alt="">
-          <img src="../assets/img/guide_3.jpg" alt="">
+          <img src="../../assets/img/guide_1.jpg" alt="">
+          <img src="../../assets/img/guide_2.jpg" alt="">
+          <img src="../../assets/img/guide_3.jpg" alt="">
         </div>
         <div class="guide_bottom">
           <span class="guide_time">
@@ -51,13 +51,13 @@
             <span class="guide_comment">
             458
             </span>
-            <img src="../assets/img/comment.png" alt="" class="guide_comment">
+            <img src="../../assets/img/comment.png" alt="" class="guide_comment">
           </div>
           <div class="guide_like">
             <span class="guide_like">
             458
             </span>
-            <img src="../assets/img/like.png" alt="" class="guide_comment">
+            <img src="../../assets/img/like.png" alt="" class="guide_comment">
           </div>
         </div>
       </div>
@@ -79,6 +79,7 @@
           discuss_gol:'/static/discuss.png',
           match_gol:'/static/match.png',
           data_gol:'/static/data.png',
+          game:'/static/lol.png'
         }
       }
     }
@@ -117,8 +118,6 @@
     margin-top: 10px;
     height: 24px;
     width: 100%;
-
-
   }
   .guide_bottom span {
     height: 24px;

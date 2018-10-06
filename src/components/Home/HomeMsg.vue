@@ -1,11 +1,11 @@
 <template>
     <div class="page">
-      <Header :msg="homemsg" :imf="imf"></Header>
+      <Header :game="game" :imf="imf"></Header>
       <div class="content">
         <!-- 资讯浏览 -->
         <div class="msg_hot">
           <div class="msg_left">
-            <img src="../assets/img/top.png" alt="">
+            <img src="../../assets/img/top.png" alt="">
             <p>按时大苏打飒飒打撒萨达阿三打算啊实打实打算大苏打飒飒按时大苏打飒飒实打实按时大苏打飒飒</p>
             <span class="msg_left_time">
             2018-9-18
@@ -15,7 +15,7 @@
           </span>
           </div>
           <div class="msg_right">
-            <img src="../assets/img/a.png" alt="">
+            <img src="../../assets/img/a.png" alt="">
           </div>
         </div>
       </div>
@@ -35,13 +35,14 @@
           discuss_gol:'/static/discuss.png',
           match_gol:'/static/match.png',
           data_gol:'/static/data.png',
+          game:'/static/lol.png'
         }
       }
     }
 </script>
 
 <style scoped>
-  @import "../assets/css/information.css";
+  @import "../../assets/css/information.css";
   .content {
     margin-top: 90px;
   }
