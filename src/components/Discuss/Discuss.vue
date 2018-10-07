@@ -18,12 +18,12 @@
         <p>我的关注</p>
         <ul>
           <router-link tag="li" to="/DiscussDetail">
-            <img src="../../assets/img/rng.png" alt="">
-            <span>RNG</span>
-          </router-link>
-          <router-link tag="li" to="/DiscussDetail">
             <img src="../../assets/img/omg/omg.png" alt="">
             <span>OMG</span>
+          </router-link>
+          <router-link tag="li" to="/DiscussDetail">
+            <img src="../../assets/img/rng.png" alt="">
+            <span>RNG</span>
           </router-link>
           <li></li>
           <li></li>

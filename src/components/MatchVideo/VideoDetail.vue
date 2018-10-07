@@ -34,10 +34,10 @@
         <div class="comment">
           <div class="comment_top">
             <img src="../../assets/img/rng.png" alt="">
-            <p class="comment_name">啊啊啊</p>
+            <p class="comment_name">Darker</p>
           </div>
           <div class="comment_content">
-            <p>阿达萨达萨达飒飒打撒阿斯顿打撒打撒</p>
+            <p>RNG加油!!!</p>
           </div>
         </div>
         <div class="guide_bottom">
@@ -60,13 +60,13 @@
         </div>
         <div class="comment_again">
           <img src="" alt="">
-          <p>嘻嘻嘻：</p>
-          <p>啊大大撒旦</p>
+          <p>莫妮娜：</p>
+          <p>RNG这把稳了</p>
         </div>
         <div class="comment_again">
           <img src="" alt="">
-          <p>嘻嘻嘻：</p>
-          <p>啊大大撒旦</p>
+          <p>烤冷面：</p>
+          <p>加油加油!!</p>
         </div>
       </div>
     </div>
