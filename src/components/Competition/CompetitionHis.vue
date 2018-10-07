@@ -19,7 +19,7 @@
       </div>
       <div class="HisCenter">
         <div>
-          <img src="../../assets/img/Ornn.png" alt="">
+          <img src="../../assets/img/Ryze(1).png" alt="">
         </div>
 
         <div class="left">
@@ -28,7 +28,7 @@
         </div>
         <div class="right">
           <p>第二场</p>
-          <p>1/2/3</p>
+          <p>5/2/5</p>
         </div>
         <div>
           <img src="../../assets/img/0-6.png" alt="">
@@ -36,7 +36,7 @@
       </div>
       <div class="HisCenter">
         <div>
-          <img src="../../assets/img/Ornn.png" alt="">
+          <img src="../../assets/img/Swain.png" alt="">
         </div>
 
         <div class="left">
@@ -45,10 +45,10 @@
         </div>
         <div class="right">
           <p>第二场</p>
-          <p>1/2/3</p>
+          <p>6/4/4</p>
         </div>
         <div>
-          <img src="../../assets/img/0-6.png" alt="">
+          <img src="../../assets/img/SS/0-14.png" alt="">
         </div>
       </div>
       <div class="HisCenter">

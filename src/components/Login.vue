@@ -21,7 +21,8 @@
         <button class="loginButton" @click="checkUser">登陆</button>
       </div>
     </div>
-    <div style="position: fixed;bottom: 10%;width: 100%">
+
+    <div style="position: fixed;top: 90%;width: 100%">
       <div class="loginLogo tencent" @click="quickLogin">
         <img src="../assets/img/tencentqq.png" class="qqtim" alt="">
         <a href="" class="quickLogin">QQ登录</a>
