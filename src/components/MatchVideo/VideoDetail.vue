@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="video">
-      <div class="video_game">
+      <div :style="note">
         <router-link tag="div" to="/VideoHome" class="wbackDiv">
           <img class="wback" src="../../assets/img/wback.png" alt="" >
         </router-link>
@@ -79,7 +79,13 @@
     name: "VideoDetail",
     data() {
       return {
-        isShow: true
+        isShow: true,
+        note: {
+          width: "100%",
+          height: "200px",
+          background: "url("+ require("../../assets/img/video.png") + ") ",
+          backgroundSize:" 100% 100%"
+        }
       }
     },
     methods: {
@@ -93,13 +99,6 @@
 <style scoped>
   .video {
     font-size: 14px;
-  }
-
-  .video_game {
-    width: 100%;
-    height: 200px;
-    background: url("../../assets/img/video.png");
-    background-size: 100% 100%;
   }
 
   .wback {

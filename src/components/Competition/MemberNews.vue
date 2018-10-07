@@ -2,7 +2,7 @@
     <div>
       <div class="msg_hot">
         <div class="msg_left">
-          <p>按时大苏打飒飒打撒萨达阿三打算啊实打实打算大苏打飒飒按时大苏打飒飒实打实按时大苏打飒飒</p>
+          <p>OMG.xiyang迎来自己LPL赛场的第300场比赛</p>
           <span class="msg_left_time">
             2018-9-18
           </span>
@@ -11,12 +11,12 @@
           </span>
         </div>
         <div class="msg_right">
-          <img src="../../assets/img/a.png" alt="">
+          <img src="../../assets/img/team_a1.png" alt="">
         </div>
       </div>
       <div class="msg_hot">
         <div class="msg_left">
-          <p>按时大苏打飒飒打撒萨达阿三打算啊实打实打算大苏打飒飒按时大苏打飒飒实打实按时大苏打飒飒</p>
+          <p>Smlz赛后与xiyang聚餐 与老队友感情依旧</p>
           <span class="msg_left_time">
             2018-9-18
           </span>
@@ -25,7 +25,7 @@
           </span>
         </div>
         <div class="msg_right">
-          <img src="../../assets/img/a.png" alt="">
+          <img src="../../assets/img/team_a3.png" alt="">
         </div>
       </div>
     </div>

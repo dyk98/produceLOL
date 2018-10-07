@@ -5,24 +5,26 @@
       <!-- 轮播图 -->
       <Slider></Slider>
       <!--  战队对战 -->
-      <div class="match">
-        <div class="match_center">
-          <a href="" class="team_left">
-            <img src="../../assets/img/rng.png" alt="">
-          </a>
-          <p>
-            对战
-          </p>
-          <a href="" class="team_right">
-            <img src="../../assets/img/omg/omg.png" alt="">
-          </a>
-        </div>
-        <span>
+
+        <router-link tag="div"  to="/VideoDetail" class="match">
+          <div class="match_center">
+            <router-link class="team_left" to="">
+              <img src="../../assets/img/rng.png" alt="">
+            </router-link>
+            <p>
+              对战
+            </p>
+            <router-link class="team_right" to="/Competition">
+              <img src="../../assets/img/omg/omg.png" alt="">
+            </router-link>
+          </div>
+          <span>
           <p>
             13:00
           </p>
-        </span>
-      </div>
+          </span>
+        </router-link>
+
       <!-- 资讯浏览 -->
       <div class="msg_hot">
         <div class="msg_left">

@@ -1,14 +1,17 @@
 <template>
   <div :style="note" id="login_body">
     <div style="position: fixed;top: 20px;left: 20px;" >
-      <img src="../assets/img/back.png" alt="" class="back" @click="back">
+      <router-link to="/">
+        <img src="../assets/img/back.png" alt="" class="back">
+      </router-link>
+
     </div>
     <div style="position: fixed">
       <div>
         <input type="text" class="loginInput inputName" placeholder="请输入您的用户名" id="name">
       </div>
       <div>
-        <input type="text" class="loginInput inputPass" placeholder="请输入您的密码" id="password">
+        <input type="password" class="loginInput inputPass" placeholder="请输入您的密码" id="password">
       </div>
       <div>
         <a class="loginP forgetPass">忘记密码</a>
@@ -57,7 +60,7 @@
         var password = document.getElementById('password').value;
         if (name == "test123" && password == 'test123') {
           alert('登陆成功');
-          window.location = '/';
+          this.$router.push({path:'/'})
         } else {
           alert('用户名或密码错误');
         }
@@ -65,9 +68,6 @@
       quickLogin: function () {
         alert('授权登录暂未开放')
       },
-      back: function () {
-        window.location = '/';
-      }
     },
   }
 </script>
