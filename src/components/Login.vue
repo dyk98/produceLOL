@@ -152,11 +152,11 @@
     font-size: 10px;
   }
   .qqtim {
-    height: 45px;
-    width: 45px;
+    height: 50px;
+    width: 50px;
   }
   .wechat {
-    height: 45px;
-    width: 45px;
+    height: 50px;
+    width: 50px;
   }
 </style>
