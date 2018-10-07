@@ -2,10 +2,16 @@
   <div class="swiper-container">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <img src="../assets/img/1.png" alt="">
+        <img src="../assets/img/slide1.jpg" alt="">
       </div>
       <div class="swiper-slide">
-        <img src="../assets/img/2.png" alt="">
+        <img src="../assets/img/slide2.jpg" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="../assets/img/slide3.jpg" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="../assets/img/slide4.jpg" alt="">
       </div>
     </div>
     <div class="swiper-pagination"></div>

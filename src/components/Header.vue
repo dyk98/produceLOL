@@ -23,7 +23,7 @@
         <router-link tag="li" to="/HomeMsg" :class="imf">资讯</router-link>
         <router-link tag="li" to="/Guide" :class="gui">攻略</router-link>
         <router-link tag="li" to="/Entertainment" :class="ent">娱乐</router-link>
-        <router-link tag="li" to="/Product" :class="pro">周边</router-link>
+        <li :class="pro" @click="a">周边</li>
       </ul>
     </div>
 
@@ -41,6 +41,11 @@
       'ent': String,
       'pro': String,
       'game':String
+    },
+    methods:{
+      a(){
+        window.alert('此功能暂未开放,请期待')
+      }
     }
   }
 </script>

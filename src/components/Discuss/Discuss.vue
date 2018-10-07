@@ -32,16 +32,34 @@
         </ul>
         <p class="discuss_hot">热门精选</p>
         <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li>
+            <img src="../../assets/img/EDG/0-2.png" alt="">
+            <span>EDG</span>
+          </li>
+          <li>
+            <img src="../../assets/img/IG/0-9.png" alt="">
+            <span>IG</span>
+          </li>
+          <li>
+            <img src="../../assets/img/JDG/0-10.png" alt="">
+            <span>JDG</span>
+          </li>
+          <li>
+            <img src="../../assets/img/FPX/0-8.png" alt="">
+            <span>FPX</span>
+          </li>
+          <li>
+            <img src="../../assets/img/SS/0-14.png" alt="">
+            <span>SS</span>
+          </li>
+          <li>
+            <img src="../../assets/img/VG/0-15.png" alt="">
+            <span>VG</span>
+          </li>
         </ul>
       </div>
     </div>
-    <Footer :discuss_gol="gol" :home_gol="home_gol" :match_gol="match_gol" :data_gol="data_gol"></Footer>
+    <Footer :discuss_gol="gol" :home_gol="home_gol" :match_gol="match_gol" :data_gol="data_gol" :team="team"></Footer>
   </div>
 </template>
 
@@ -54,6 +72,8 @@
           gol : require('../../assets/img/discuss1.png'),
           match_gol : require('../../assets/img/match.png'),
           data_gol : require('../../assets/img/data.png'),
+          team:require('../../assets/img/omg/omg.png')
+
         }
       },
       methods: {

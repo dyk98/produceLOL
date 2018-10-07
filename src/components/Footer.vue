@@ -1,13 +1,17 @@
 <template>
+  <div>
+    <div style="margin-bottom: 3.3rem"></div>
     <div id="footer">
       <ul class="bottom">
         <router-link tag="li" to="/"><img :src="home_gol" alt=""></router-link>
         <router-link tag="li" class="left" to="/Discuss"><img :src="discuss_gol" alt=""></router-link>
-        <router-link tag="li" id="rng" to="/Competition"><img src="../assets/img/omg/omg.png" alt="" class="rng" :class="{'active':gol}"></router-link>
+        <router-link tag="li" id="rng" to="/Competition"><img :src="team" alt="" class="rng" :class="{'active':gol}"></router-link>
         <router-link tag="li" class="right" to="/VideoHome"><img :src="match_gol" alt=""></router-link>
         <router-link tag="li" to="/Data"><img :src="data_gol" alt=""></router-link>
       </ul>
     </div>
+  </div>
+
 </template>
 
 <script>
@@ -24,6 +28,7 @@
         'match_gol': String,
         'data_gol': String,
         'gol':Boolean,
+        'team':String
       }
     }
 </script>

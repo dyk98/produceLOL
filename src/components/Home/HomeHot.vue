@@ -27,65 +27,90 @@
       <div class="msg_hot">
         <div class="msg_left">
           <img src="../../assets/img/top.png" alt="">
-          <p>按时大苏打飒飒打撒萨达阿三打算啊实打实打算大苏打飒飒按时大苏打飒飒实打实按时大苏打飒飒</p>
+          <p>2018英雄联盟全球总决赛入围赛即将到来</p>
           <span class="msg_left_time">
-            2018-9-18
+            2018-09-30
           </span>
           <span class="msg_left_num">
-            1.7万阅读量
+            1.5万次阅读
           </span>
         </div>
         <div class="msg_right">
-          <img src="../../assets/img/a.png" alt="">
+          <img src="../../assets/img/home_a1.jpg" alt="">
         </div>
       </div>
       <div class="msg_hot">
         <div class="msg_left">
-          <img src="../../assets/img/top.png" alt="" >
-          <p>按时大苏打飒飒打撒萨达阿三打算啊实打实打算大苏打飒飒按时大苏打飒飒实打实按时大苏打飒飒</p>
+          <p>"集卡兑换【龙的传人 乘龙御天】功能现已开启</p>
           <span class="msg_left_time">
-            2018-9-18
+            2018-09-28
           </span>
           <span class="msg_left_num">
-            1.7万阅读量
+            4.8万次阅读
           </span>
         </div>
         <div class="msg_right">
-          <img src="../../assets/img/a.png" alt="">
+          <img src="../../assets/img/home_a2.jpg" alt="">
         </div>
       </div>
       <div class="msg_hot">
         <div class="msg_left">
-          <img src="../../assets/img/top.png" alt="">
-          <p>按时大苏打飒飒打撒萨达阿三打算啊实打实打算大苏打飒飒按时大苏打飒飒实打实按时大苏打飒飒</p>
+          <p>8.19版本更新：世界赛版本正式来袭</p>
           <span class="msg_left_time">
-              2018-9-18
+              2018-09-26
             </span>
           <span class="msg_left_num">
-              1.7万阅读量
+              3.5万次阅读
             </span>
         </div>
         <div class="msg_right">
-          <img src="../../assets/img/a.png" alt="">
+          <img src="../../assets/img/home_a3.jpg" alt="">
         </div>
       </div>
       <div class="msg_hot">
         <div class="msg_left">
-          <img src="../../assets/img/top.png" alt="">
-          <p>按时大苏打飒飒打撒萨达阿三打算啊实打实打算大苏打飒飒按时大苏打飒飒实打实按时大苏打飒飒</p>
+          <p>雅加达 2018 珍藏纪念图标限时销售</p>
           <span class="msg_left_time">
-              2018-9-18
+              2018-09-30
             </span>
           <span class="msg_left_num">
-              1.7万阅读量
+              2.6万次阅读
             </span>
         </div>
         <div class="msg_right">
-          <img src="../../assets/img/a.png" alt="">
+          <img src="../../assets/img/home_a4.jpg" alt="">
+        </div>
+      </div>
+      <div class="msg_hot">
+        <div class="msg_left">
+          <p>2018全球总决赛解说宣传片《没有假如》</p>
+          <span class="msg_left_time">
+              2018-09-30
+            </span>
+          <span class="msg_left_num">
+              25.7万次阅读
+            </span>
+        </div>
+        <div class="msg_right">
+          <img src="../../assets/img/home_a5.jpg" alt="">
+        </div>
+      </div>
+      <div class="msg_hot">
+        <div class="msg_left">
+          <p>S8火热开打 幻联赛助威活动抢先看！</p>
+          <span class="msg_left_time">
+              2018-10-02
+            </span>
+          <span class="msg_left_num">
+              1.2万次阅读
+            </span>
+        </div>
+        <div class="msg_right">
+          <img src="../../assets/img/home_a6.jpg" alt="">
         </div>
       </div>
     </div>
-    <Footer :home_gol="gol" :discuss_gol="discuss_gol" :match_gol="match_gol" :data_gol="data_gol"></Footer>
+    <Footer :home_gol="gol" :discuss_gol="discuss_gol" :match_gol="match_gol" :data_gol="data_gol" :team="team"></Footer>
   </div>
 </template>
 
@@ -102,6 +127,8 @@
         match_gol : require('../../assets/img/match.png'),
         data_gol : require('../../assets/img/data.png'),
         game : require('../../assets/img/lol.png'),
+        team:require('../../assets/img/omg/omg.png')
+
       }
     }
   }
@@ -137,6 +164,7 @@
     height: 40px;
     width: 50px;
     line-height: 40px;
+    margin-top: 8px;
   }
   .match .match_center .team_right {
     float: right;

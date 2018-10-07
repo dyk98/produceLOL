@@ -10,10 +10,10 @@
             <!--<img src="../../assets/img/xiyang.png" alt="">-->
           <!--</div>-->
           <div class="swiper-slide">
-            <img src="../../assets/img/xiyang.png" alt="">
+            <img src="../../assets/img/icon.png" alt="">
           </div>
           <div class="swiper-slide">
-            <img src="../../assets/img/xiyang.png" alt="">
+            <img src="../../assets/img/world6.png" alt="">
           </div>
           <div class="swiper-slide">
             <img src="../../assets/img/xiyang.png" alt="">

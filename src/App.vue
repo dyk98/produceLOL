@@ -16,7 +16,7 @@
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding-bottom: 3.3rem;
+  /*padding-bottom: 3.3rem;*/
 }
 
 </style>

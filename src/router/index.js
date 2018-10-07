@@ -38,6 +38,8 @@ import Data from '@/components/Data/Data'
 import LplData from '@/components/Data/LplData'
 import LckData from '@/components/Data/LckData'
 import Person from '@/components/Person'
+import Login from '@/components/Login'
+import EdgMsg from '@/components/Competition/EdgMsg'
 
 
 
@@ -165,6 +167,14 @@ export default new Router({
       path: '/ChangeTeam',
       name: 'ChangeTeam',
       component: ChangeTeam,
+      redirect:'/ChangeTeam/EdgMsg',
+      children:[
+        {
+          path: '/ChangeTeam/EdgMsg',
+          name: 'EdgMsg',
+          component: EdgMsg,
+        }
+      ]
     },
     {
       path: '/VideoHome',
@@ -216,6 +226,11 @@ export default new Router({
           component: LckData,
         },
       ]
+    },
+    {
+      path: '/Login',
+      name: 'Login',
+      component: Login,
     },
   ]
 })

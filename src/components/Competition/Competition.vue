@@ -25,7 +25,7 @@
     <router-view ></router-view>
 
 
-    <div id="show_team" hidden>
+    <div id="show_team" v-show="hid1" >
       <div class="bg">
 
       </div>
@@ -68,7 +68,7 @@
     </div>
 
 
-    <Footer :discuss_gol="discuss_gol" :home_gol="home_gol" :match_gol="match_gol" :data_gol="data_gol" :gol="gol"></Footer>
+    <Footer :discuss_gol="discuss_gol" :home_gol="home_gol" :match_gol="match_gol" :data_gol="data_gol" :gol="gol" :team="team"></Footer>
   </div>
 
 </template>
@@ -83,7 +83,9 @@
           match_gol : require('../../assets/img/match.png'),
           data_gol : require('../../assets/img/data.png'),
           gol:true,
-          hid:true
+          hid:true,
+          hid1:false,
+          team:require('../../assets/img/omg/omg.png')
         }
       },
       methods: {
@@ -98,13 +100,13 @@
         },
         showteam() {
           var q = document.getElementById('show_team');
-          if (q.style.display = 'hidden'){
-            q.style.display = 'block';
+          if (this.hid1 === false){
+            this.hid1 = !this.hid1;
             this.hid = !this.hid
           } else {
-            q.style.display = 'hidden';
-            this.hid = !this.hid
-            console.log('aaa')
+            this.hid1 = !this.hid1;
+            this.hid = !this.hid;
+            console.log('aaa');
           }
         }
       }

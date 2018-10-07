@@ -87,7 +87,7 @@
         </div>
       </router-link>
     </div>
-    <Footer :discuss_gol="discuss_gol" :home_gol="home_gol" :match_gol="match_gol" :data_gol="data_gol"></Footer>
+    <Footer :discuss_gol="discuss_gol" :home_gol="home_gol" :match_gol="match_gol" :data_gol="data_gol" :team="team"></Footer>
   </div>
 </template>
 
@@ -107,6 +107,8 @@
         discuss_gol : require('../../assets/img/discuss.png'),
         match_gol : require('../../assets/img/match1.png'),
         data_gol : require('../../assets/img/data.png'),
+        team:require('../../assets/img/omg/omg.png')
+
       }
     },
     mounted(){

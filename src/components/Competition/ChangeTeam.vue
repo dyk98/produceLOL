@@ -14,7 +14,7 @@
       <!-- 栏目 -->
       <div class="column">
         <ul >
-          <router-link tag="li" to="/Competition/CompetitionMsg" >动态</router-link>
+          <router-link tag="li" to="/ChangeTeam/EdgMsg" >动态</router-link>
           <router-link tag="li" to="/Competition/CompetitionTime" >赛程</router-link>
           <router-link tag="li" to="/Competition/CompetitionMember" >队员</router-link>
           <router-link tag="li" to="/Competition/CompetitionData" >数据</router-link>
@@ -67,7 +67,7 @@
     </div>
 
 
-    <Footer :discuss_gol="discuss_gol" :home_gol="home_gol" :match_gol="match_gol" :data_gol="data_gol" :gol="gol"></Footer>
+    <Footer :discuss_gol="discuss_gol" :home_gol="home_gol" :match_gol="match_gol" :data_gol="data_gol" :gol="gol" :team="team"></Footer>
   </div>
 
 </template>
@@ -82,7 +82,8 @@
         match_gol : require('../../assets/img/match.png'),
         data_gol : require('../../assets/img/data.png'),
         gol:true,
-        hid:true
+        hid:true,
+        team:require('../../assets/img/EDG/0-2.png')
       }
     },
     methods: {

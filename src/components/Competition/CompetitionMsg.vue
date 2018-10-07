@@ -4,21 +4,21 @@
       <!-- 资讯浏览 -->
       <div class="msg_hot">
         <div class="msg_left">
-          <p>按时大苏打飒飒打撒萨达阿三打算啊实打实打算大苏打飒飒按时大苏打飒飒实打实按时大苏打飒飒</p>
+          <p>OMG.xiyang迎来自己LPL赛场的第300场比赛</p>
           <span class="msg_left_time">
-            2018-9-18
+            2018-7-18
           </span>
           <span class="msg_left_num">
-            1.7万阅读量
+            14.7万次阅读
           </span>
         </div>
         <div class="msg_right">
-          <img src="../../assets/img/a.png" alt="">
+          <img src="../../assets/img/team_a1.png" alt="">
         </div>
       </div>
       <div class="msg_hot">
         <div class="msg_left">
-          <p>按时大苏打飒飒打撒萨达阿三打算啊实打实打算大苏打飒飒按时大苏打飒飒实打实按时大苏打飒飒</p>
+          <p>OMG0-2惨败RNG，粉丝感慨：只有我们在抗揍</p>
           <span class="msg_left_time">
             2018-9-18
           </span>
@@ -27,21 +27,35 @@
           </span>
         </div>
         <div class="msg_right">
-          <img src="../../assets/img/a.png" alt="">
+          <img src="../../assets/img/team_a2.png" alt="">
         </div>
       </div>
       <div class="msg_hot">
         <div class="msg_left">
-          <p>按时大苏打飒飒打撒萨达阿三打算啊实打实打算大苏打飒飒按时大苏打飒飒实打实按时大苏打飒飒</p>
+          <p>Smlz赛后与OMG聚餐 与老队友感情依旧</p>
           <span class="msg_left_time">
-            2018-9-18
+            2018-7-17
           </span>
           <span class="msg_left_num">
-            1.7万阅读量
+            5.8万次阅读
           </span>
         </div>
         <div class="msg_right">
-          <img src="../../assets/img/a.png" alt="">
+          <img src="../../assets/img/team_a3.png" alt="">
+        </div>
+      </div>
+      <div class="msg_hot">
+        <div class="msg_left">
+          <p>OMG取得赛季首胜，网友盛赞新打野很强，Icon依旧无敌</p>
+          <span class="msg_left_time">
+            2018-7-17
+          </span>
+          <span class="msg_left_num">
+            23.8万次阅读
+          </span>
+        </div>
+        <div class="msg_right">
+          <img src="../../assets/img/team_a4.png" alt="">
         </div>
       </div>
     </div>

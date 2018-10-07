@@ -6,20 +6,76 @@
         <div class="msg_hot">
           <div class="msg_left">
             <img src="../../assets/img/top.png" alt="">
-            <p>按时大苏打飒飒打撒萨达阿三打算啊实打实打算大苏打飒飒按时大苏打飒飒实打实按时大苏打飒飒</p>
+            <p>《全球总决赛传奇》第二期：Uzi的传奇开篇</p>
             <span class="msg_left_time">
-            2018-9-18
+            2018-10-01
           </span>
             <span class="msg_left_num">
-            1.7万阅读量
+            22.1万次阅读
           </span>
           </div>
           <div class="msg_right">
-            <img src="../../assets/img/a.png" alt="">
+            <img src="../../assets/img/home_b1.jpg" alt="">
+          </div>
+        </div>
+        <div class="msg_hot">
+          <div class="msg_left">
+            <p>2018全球总决赛主题曲MV—登峰造极境</p>
+            <span class="msg_left_time">
+            2018-09-28
+          </span>
+            <span class="msg_left_num">
+            166.0万次阅读
+          </span>
+          </div>
+          <div class="msg_right">
+            <img src="../../assets/img/home_b2.jpg" alt="">
+          </div>
+        </div>
+        <div class="msg_hot">
+          <div class="msg_left">
+            <p>全球总决赛激战季开启！</p>
+            <span class="msg_left_time">
+            2018-10-01
+          </span>
+            <span class="msg_left_num">
+            12.6万次阅读
+          </span>
+          </div>
+          <div class="msg_right">
+            <img src="../../assets/img/home_b3.jpg" alt="">
+          </div>
+        </div>
+        <div class="msg_hot">
+          <div class="msg_left">
+            <p>奥德赛船员性格测试 来看看你在船上的职责吧！</p>
+            <span class="msg_left_time">
+            2018-09-28
+          </span>
+            <span class="msg_left_num">
+            12.6万次阅读
+          </span>
+          </div>
+          <div class="msg_right">
+            <img src="../../assets/img/home_b4.jpg" alt="">
+          </div>
+        </div>
+        <div class="msg_hot">
+          <div class="msg_left">
+            <p>S8火热开打 幻联赛助威活动抢先看！</p>
+            <span class="msg_left_time">
+            2018-10-02
+          </span>
+            <span class="msg_left_num">
+            1.2万次阅读
+          </span>
+          </div>
+          <div class="msg_right">
+            <img src="../../assets/img/home_a6.jpg" alt="">
           </div>
         </div>
       </div>
-      <Footer :home_gol="gol" :discuss_gol="discuss_gol" :match_gol="match_gol" :data_gol="data_gol"></Footer>
+      <Footer :home_gol="gol" :discuss_gol="discuss_gol" :match_gol="match_gol" :data_gol="data_gol" :team="team"></Footer>
     </div>
 
 </template>
@@ -36,6 +92,8 @@
           match_gol : require('../../assets/img/match.png'),
           data_gol : require('../../assets/img/data.png'),
           game : require('../../assets/img/lol.png'),
+          team:require('../../assets/img/omg/omg.png')
+
         }
       }
     }

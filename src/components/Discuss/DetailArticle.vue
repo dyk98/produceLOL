@@ -13,24 +13,20 @@
       <div class="content">
         <div class="article">
           <div class="article_top">
-            <img src="../../assets/img/rng.png" alt="">
-            <p class="user_name">啊啊啊</p>
+            <img src="../../assets/img/discuss2.jpg" alt="">
+            <p class="user_name">Darker</p>
           </div>
           <div class="article_content">
             <div class="text">
-              <p>啊实打实大苏打实打实大苏打撒旦撒大苏打这些大撒大撒大撒撒旦 阿瑟东阿三打算打算
-              撒大苏打实打实阿瑟东阿三
-              萨达上的阿三
-              sdassdsd
-              按时的撒按时</p>
+              <p>国外著名媒体BotEsports昨日发表了S8前五战队的排名，依次为KT、RNG、Gen.G、AFS以及Fnc或IG。看来在欧美评测机构中依然十分看好LCK赛区的队伍，也许他们从赛区对抗强度以及历史成绩上得此结论。但是在笔者看来，LPL的实力被低估了很多，毕竟能够跟RNG拼到弹尽粮绝的IG，绝不至于在前五垫底。而且，没遇见RNG的队伍都比RNG强的梗也是真实的很...无论是MSI还是洲际赛，我们都可以很明显的感受到在纯技术实力上来讲，LPL并不比LCK要差，甚至隐隐超越。那么在你的眼中，本届世界赛的TOP5战队都是哪些呢？</p>
             </div>
             <!--<textarea name="" id="" cols="30" rows="99">啊实打实打算</textarea>-->
-            <img src="../../assets/img/1.png" alt="">
+            <img src="../../assets/img/discuss1.jpg" alt="">
           </div>
         </div>
         <div class="guide_bottom">
           <span class="guide_time">
-            刚刚
+            2018-9-30
           </span>
           <div class="guide_comment">
             <span class="guide_comment">
@@ -56,26 +52,26 @@
         <div class="comment_all">
           <div class="comment">
             <div class="comment_top">
-              <img src="../../assets/img/rng.png" alt="">
-              <p class="comment_name">啊啊啊</p>
+              <img src="../../assets/img/discuss3.jpg" alt="">
+              <p class="comment_name">野草疯</p>
             </div>
             <div class="comment_content">
-              <p>阿达萨达萨达飒飒打撒阿斯顿打撒打撒</p>
+              <p>FW从未缺席4强？？？我记得去年四强好像是RNG WE SKT SSG吧</p>
             </div>
           </div>
           <div class="guide_bottom">
           <span class="guide_time">
-            刚刚
+            2018-9-30
           </span>
             <div class="guide_comment">
             <span class="guide_comment">
-            458
+            258
             </span>
               <img src="../../assets/img/comment.png" alt="" class="guide_comment">
             </div>
             <div class="guide_like">
               <span class="guide_like">
-              458
+              658
               </span>
               <img src="../../assets/img/like.png" alt="" class="guide_comment" v-show="isShow" @click="toggle">
               <img src="../../assets/img/like1.png" alt="" class="guide_comment" v-show="!isShow" @click="toggle">
@@ -83,23 +79,23 @@
           </div>
           <div class="comment_again">
             <img src="" alt="">
-            <p>嘻嘻嘻：</p>
-            <p>啊大大撒旦</p>
+            <p>点点elise：</p>
+            <p>1.EDG  2.IG  3.GEN.G 4.KT 5.RNG</p>
           </div>
           <div class="comment_again">
             <img src="" alt="">
-            <p>嘻嘻嘻：</p>
-            <p>啊大大撒旦</p>
+            <p>Spadger：</p>
+            <p>rng kt geng一个档次  都是第一</p>
           </div>
         </div>
         <div class="comment_all">
           <div class="comment">
             <div class="comment_top">
-              <img src="../../assets/img/rng.png" alt="">
-              <p class="comment_name">啊啊啊</p>
+              <img src="../../assets/img/discuss4.jpg" alt="">
+              <p class="comment_name">沉醉屠龙情</p>
             </div>
             <div class="comment_content">
-              <p>阿达萨达萨达飒飒打撒阿斯顿打撒打撒</p>
+              <p>TOP1. RNG   KT并列</p>
             </div>
           </div>
           <div class="guide_bottom">
@@ -108,13 +104,13 @@
             </span>
             <div class="guide_comment">
             <span class="guide_comment">
-            458
+            568
             </span>
               <img src="../../assets/img/comment.png" alt="" class="guide_comment">
             </div>
             <div class="guide_like">
             <span class="guide_like">
-            458
+            128
             </span>
               <img src="../../assets/img/like.png" alt="" class="guide_comment" v-show="isShow" @click="toggle">
               <img src="../../assets/img/like1.png" alt="" class="guide_comment" v-show="!isShow" @click="toggle">
@@ -122,13 +118,13 @@
           </div>
           <div class="comment_again">
             <img src="" alt="">
-            <p>嘻嘻嘻：</p>
-            <p>啊大大撒旦</p>
+            <p>普拉夫：</p>
+            <p>我觉得今年rng确实厉害</p>
           </div>
           <div class="comment_again">
             <img src="" alt="">
-            <p>嘻嘻嘻：</p>
-            <p>啊大大撒旦</p>
+            <p>抱抱你：</p>
+            <p>1.gen.g 2.kt 3.rng 4.afs 5.fw</p>
           </div>
         </div>
 

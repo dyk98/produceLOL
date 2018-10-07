@@ -4,7 +4,10 @@
         <router-link tag="div" to="/" class="rightDiv">
           <img src="../assets/img/out.png" alt="" class="right">
         </router-link>
-        <img src="../assets/img/head.png" alt="" class="left">
+        <router-link tag="div" to="/Login" class="leftDiv">
+          <img src="../assets/img/head.png" alt="" class="left">
+        </router-link>
+
         <p>用户名</p>
       </div>
       <div class="menu">
@@ -65,6 +68,13 @@
     top: 1rem;
     padding: 4px;
     border: 1px solid #AAAAAA;
+  }
+  .leftDiv {
+    width: 36px;
+    height: 36px;
+    position: fixed;
+    left: 1rem;
+    top: 1rem;
   }
   .head .right {
     height: 24px;
