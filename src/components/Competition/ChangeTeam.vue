@@ -29,6 +29,8 @@
       <div class="bg">
 
       </div>
+      <div style="position: absolute; top: 20px; left: 15px"><img style="width: 20px" src="../../assets/img/out.png" alt="" @click="showteam"></div>
+
       <span>
     <div class="zone" >
         <div id="lpl" class="zone_bg" ><img class="zone_logo" src="../../assets/img/lpl.png" alt=""></div>
@@ -39,9 +41,9 @@
     </div>
     <div class="team">
         <img class="team_logo" src="../../assets/img/BLG/0-7.png" alt="">
-        <router-link tag="div" to="/Competition/ChangeTeam" class="logoDiv">
+
           <img class="team_logo" src="../../assets/img/EDG/0-2.png" alt="">
-        </router-link>
+
         <img class="team_logo" src="../../assets/img/FPX/0-8.png" alt="">
         <img class="team_logo" src="../../assets/img/IG/0-9.png" alt="">
         <img class="team_logo" src="../../assets/img/JDG/0-10.png" alt="">
@@ -49,7 +51,9 @@
 
     <div class="team_b">
         <img class="team_logo" src="../../assets/img/LGD/0-11.png" alt="">
-        <img class="team_logo" src="../../assets/img/omg/0-5.png" alt="">
+              <router-link tag="div" to="/Competition/CompetitionMsg" class="logoDiv">
+                  <img class="team_logo" src="../../assets/img/omg/0-5.png" alt="">
+              </router-link>
         <img class="team_logo" src="../../assets/img/Rng/0-12.png" alt="">
         <img class="team_logo" src="../../assets/img/RW/0-1.png" alt="">
         <img class="team_logo" src="../../assets/img/SNG/0-13.png" alt="">
@@ -101,7 +105,8 @@
         q.style.display = 'block';
         q.style.zIndex = '999';
         this.hid = !this.hid
-      }
+
+      },
     }
   }
 </script>

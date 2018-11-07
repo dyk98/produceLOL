@@ -1,12 +1,12 @@
 <template>
   <div class="swiper-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">
+      <router-link tag="div" class="swiper-slide" to="/DetailArticle1">
         <img src="../assets/img/slide1.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
+      </router-link>
+      <router-link tag="div" class="swiper-slide" to="/DetailArticle2">
         <img src="../assets/img/slide2.jpg" alt="">
-      </div>
+      </router-link>
       <div class="swiper-slide">
         <img src="../assets/img/slide3.jpg" alt="">
       </div>

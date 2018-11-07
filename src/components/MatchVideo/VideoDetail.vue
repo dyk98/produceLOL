@@ -1,10 +1,9 @@
 <template>
   <div>
     <div class="video">
-      <div :style="note">
-        <router-link tag="div" to="/VideoHome" class="wbackDiv">
-          <img class="wback" src="../../assets/img/wback.png" alt="" >
-        </router-link>
+      <div :style="note" class="topClass">
+        <img class="wback" src="../../assets/img/wback.png" alt="" @click="backRouter">
+        <img src="../../assets/img/go.png" alt="" class="go" @click="watchMatch">
       </div>
       <p class="video_font" >2018-10-03 14:20:00</p>
       <div class="video_flex">
@@ -91,6 +90,12 @@
     methods: {
       toggle() {
         this.isShow = !this.isShow
+      },
+      backRouter() {
+        this.$router.back(-1)
+      },
+      watchMatch() {
+        window.confirm("你现在使用的是运营商网络，继续观看可能产生超额流量费。")
       }
     }
   }
@@ -105,8 +110,17 @@
     width: 20px;
     margin: 13px 5px;
   }
-  .wbackDiv {
-    width: 20px;
+  .go {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 50%;
+    margin-top: -17.5px;
+    left: 50%;
+    margin-left: -17.5px;
+  }
+  .topClass {
+    position: relative;
   }
   .video_font {
     margin: 5px 13px;

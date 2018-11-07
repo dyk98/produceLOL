@@ -1,7 +1,7 @@
 <template>
     <div>
       <div class="lck">
-        <img class="show"  src="../../assets/img/down.png" alt="">
+        <img class="show" id="player" src="../../assets/img/down.png" alt="">
         <span>选手排名</span>
         <div id="rank_player">
           <div>

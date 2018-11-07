@@ -17,6 +17,10 @@ import DiscussDetail from '@/components/Discuss/DiscussDetail'
 import DiscussAll from '@/components/Discuss/DiscussAll'
 import DiscussWell from '@/components/Discuss/DiscussWell'
 import DetailArticle from '@/components/Discuss/DetailArticle'
+import DetailArticle1 from '@/components/Discuss/DetailArticle1'
+import DetailArticle2 from '@/components/Discuss/DetailArticle2'
+import DetailArticle3 from '@/components/Discuss/DetailArticle3'
+
 import ArticleAdd from '@/components/Discuss/ArticleAdd'
 import Competition from '@/components/Competition/Competition'
 import CompetitionMsg from '@/components/Competition/CompetitionMsg'
@@ -129,6 +133,21 @@ export default new Router({
       path: '/DetailArticle',
       name: 'DetailArticle',
       component: DetailArticle,
+    },
+    {
+      path: '/DetailArticle1',
+      name: 'DetailArticle1',
+      component: DetailArticle1,
+    },
+    {
+      path: '/DetailArticle2',
+      name: 'DetailArticle2',
+      component: DetailArticle2,
+    },
+    {
+      path: '/DetailArticle3',
+      name: 'DetailArticle3',
+      component: DetailArticle3,
     },
     {
       path: '/Competition',

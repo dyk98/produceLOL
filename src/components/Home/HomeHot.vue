@@ -26,7 +26,7 @@
         </router-link>
 
       <!-- 资讯浏览 -->
-      <div class="msg_hot">
+      <router-link tag="div" class="msg_hot" to="/DetailArticle2">
         <div class="msg_left">
           <img src="../../assets/img/top.png" alt="">
           <p>2018英雄联盟全球总决赛入围赛即将到来</p>
@@ -40,8 +40,8 @@
         <div class="msg_right">
           <img src="../../assets/img/home_a1.jpg" alt="">
         </div>
-      </div>
-      <div class="msg_hot">
+      </router-link>
+      <router-link tag="div" class="msg_hot" to="/DetailArticle3">
         <div class="msg_left">
           <p>"集卡兑换【龙的传人 乘龙御天】功能现已开启</p>
           <span class="msg_left_time">
@@ -54,7 +54,7 @@
         <div class="msg_right">
           <img src="../../assets/img/home_a2.jpg" alt="">
         </div>
-      </div>
+      </router-link>
       <div class="msg_hot">
         <div class="msg_left">
           <p>8.19版本更新：世界赛版本正式来袭</p>

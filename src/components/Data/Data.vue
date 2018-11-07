@@ -45,6 +45,103 @@
         }
       },
     }
+    $(function(){
+      var player = 1;
+
+      var show_more =1;
+      var show_less =0;
+
+      var team = 1;
+
+      var E = 1;
+      var W = 0;
+
+
+      $('#player').click(function () {
+        if(player === 1){
+          player = 0;
+          $('#player').css( "transform","rotate(180deg)" );
+          $('#rank_player').css("display","none");
+        }else {
+          player = 1;
+          $('#rank_player').css("display","block");
+          $('#player').css( "transform","rotate(0deg)" );
+        }
+      });
+
+      $('#show_more').click(function () {
+        if(show_more === 1){
+          show_more = 0;
+          $('#show_more').css("display","none");
+          $('.hidden').css("display","block");
+          $('#show_less').css("display","block");
+          show_less = 1;
+        }
+      });
+
+      $('#show_less').click(function () {
+        if(show_less === 1){
+          show_more = 1;
+          $('#show_more').css("display","block");
+          $('.hidden').css("display","none");
+          $('#show_less').css("display","none");
+          show_less = 0;
+        }
+      });
+
+      $('#team').click(function () {
+        if(team === 1){
+          team = 0;
+          $('#rank_team').css("display","none");
+          $('#team').css( "transform","rotate(180deg)" );
+        }else {
+          team = 1;
+          $('#rank_team').css("display","block");
+          $('#team').css( "transform","rotate(0deg)" );
+        }
+      });
+
+      $('#east').click(function () {
+        if(E === 1){
+          $('#east_content').css("display","block");
+          $('#west_content').css("display","none");
+          $('#east').css("color","#B99D6F");
+          $('#east_').css("background","#B99D6F");
+          $('#west').css("color","#000000");
+          $('#west_').css("background","#FFFFFF");
+        }
+      });
+
+      $('#west').click(function () {
+        if(W === 0) {
+          $('#east_content').css("display", "none");
+          $('#west_content').css("display", "block");
+          $('#west').css("color","#B99D6F");
+          $('#west_').css("background","#B99D6F");
+          $('#east').css("color","#000000");
+          $('#east_').css("background","#FFFFFF");
+        }
+      });
+
+      $('#saiqu_a').click(function () {
+        $('.saiqu').css("border-bottom","4px solid #EAEAEA");
+        $('#saiqu_a').css("border-bottom","4px solid #B99D6F");
+        $('.lck').css("display","none");
+        $('.ranking_player').css("display","block");
+        $('.ranking_team').css("display","block");
+      });
+
+      $('#saiqu_b').click(function () {
+        $('.saiqu').css("border-bottom","4px solid #EAEAEA");
+        $('#saiqu_b').css("border-bottom","4px solid #B99D6F");
+
+        $('.lck').css("display","block");
+        $('.ranking_player').css("display","none");
+        $('.ranking_team').css("display","none");
+
+      });
+    })
+
 
 </script>
 

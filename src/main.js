@@ -3,7 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import'jquery'
 import '../node_modules/swiper/dist/css/swiper.css'
+
 
 
 Vue.config.productionTip = false

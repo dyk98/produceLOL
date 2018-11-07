@@ -2,12 +2,12 @@
     <div class="page">
       <div class="header">
         <div class="header_top">
-          <router-link class="back" to="/DiscussDetail">
-            <img src="../../assets/img/back.png" alt="">
-          </router-link>
-          <p>
-            Rng粉丝鸭血汤
-          </p>
+          <div class="back">
+            <img src="../../assets/img/back.png" alt="" @click="backRouter">
+          </div>
+          <!--<p>-->
+            <!--Rng粉丝鸭血汤-->
+          <!--</p>-->
         </div>
       </div>
       <div class="content">
@@ -132,7 +132,8 @@
       <div class="bottom">
         <img src="../../assets/img/pen.png" alt="" class="bottom_left">
         <input type="text" placeholder="我来说几句..." id="input_search">
-        <img src="../../assets/img/out.png" alt="" class="bottom_right" @click="clear">
+        <!--<p @click="clear" style="display: inline-block" class="bottom_right">发送</p>-->
+        <img src="../../assets/img/send1.png" alt="" class="bottom_right" @click="clear">
       </div>
 
     </div>
@@ -148,6 +149,9 @@
         },
         toggle() {
           this.isShow = !this.isShow
+        },
+        backRouter() {
+          this.$router.back(-1)
         }
       },
       data() {
@@ -337,8 +341,8 @@
     position: absolute;
     right: 5%;
     top: 17.5px;
-    height: 15px;
-    width: 15px;
+    height: 20px;
+    width: 20px;
   }
   .bottom .bottom_left {
     position: absolute;

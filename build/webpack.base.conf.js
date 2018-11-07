@@ -1,3 +1,4 @@
+// var webpack = require('webpack')
 'use strict'
 const path = require('path')
 const utils = require('./utils')
@@ -23,13 +24,20 @@ module.exports = {
       ? config.build.assetsPublicPath
       : config.dev.assetsPublicPath
   },
-  resolve: {
+    resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
     }
   },
+    plugins: [
+        new webpack.ProvidePlugin({
+            $:"jquery",
+            jQuery:"jquery",
+            "windows.jQuery":"jquery"
+        })
+    ],
   module: {
     rules: [
       {
@@ -79,12 +87,5 @@ module.exports = {
     net: 'empty',
     tls: 'empty',
     child_process: 'empty'
-  },
-  plugins: [
-    new webpack.ProvidePlugin({  //引入Jquery
-      $: 'jquery',
-      jQuery: 'jquery',
-      'window.jQuery':'jquery'
-    })
-  ]
+  }
 }

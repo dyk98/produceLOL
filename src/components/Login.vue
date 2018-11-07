@@ -1,9 +1,7 @@
 <template>
   <div :style="note" id="login_body">
     <div style="position: fixed;top: 20px;left: 20px;" >
-      <router-link to="/">
-        <img src="../assets/img/back.png" alt="" class="back">
-      </router-link>
+        <img src="../assets/img/back.png" alt="" class="back" @click="backRouter">
 
     </div>
     <div style="position: fixed">
@@ -22,7 +20,7 @@
       </div>
     </div>
 
-    <div style="position: fixed;top: 90%;width: 100%">
+    <div style="position: fixed;top: 490px;width: 100%">
       <div class="loginLogo tencent" @click="quickLogin">
         <img src="../assets/img/tencentqq.png" class="qqtim" alt="">
         <a href="" class="quickLogin">QQ登录</a>
@@ -69,6 +67,9 @@
       quickLogin: function () {
         alert('授权登录暂未开放')
       },
+      backRouter() {
+        this.$router.back(-1)
+      }
     },
   }
 </script>

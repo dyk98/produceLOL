@@ -18,12 +18,12 @@
         <p>我的关注</p>
         <ul>
           <router-link tag="li" to="/DiscussDetail">
-            <img src="../../assets/img/omg/omg.png" alt="">
-            <span>OMG</span>
-          </router-link>
-          <router-link tag="li" to="/DiscussDetail">
             <img src="../../assets/img/rng.png" alt="">
             <span>RNG</span>
+          </router-link>
+          <router-link tag="li" to="/DiscussDetail">
+            <img src="../../assets/img/omg/omg.png" alt="">
+            <span>OMG</span>
           </router-link>
           <li></li>
           <li></li>
@@ -171,7 +171,7 @@
   #content .discuss ul li img {
     width: 100%;
     height: 100%;
-    border: 1px solid #AAAAAA;
+    border: 1px solid #DADADA;
   }
   #content .discuss ul li span{
     font-size: 14px;
