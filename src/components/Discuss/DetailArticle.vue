@@ -334,7 +334,7 @@
     border-radius: 3px;
     padding-left: 10%;
     outline: none;
-    margin-left: 3%;
+    margin-left: 2.5%;
     margin-top: 10px;
   }
   .bottom .bottom_right {

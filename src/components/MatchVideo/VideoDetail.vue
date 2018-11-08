@@ -53,8 +53,8 @@
               <span class="guide_like">
               458
               </span>
-            <img src="/static/like.png" alt="" class="guide_comment" v-show="isShow" @click="toggle">
-            <img src="/static/like1.png" alt="" class="guide_comment" v-show="!isShow" @click="toggle">
+            <img src="../../../static/like.png" alt="" class="guide_comment" v-show="isShow" @click="toggle">
+            <img src="../../../static/like1.png" alt="" class="guide_comment" v-show="!isShow" @click="toggle">
           </div>
         </div>
         <div class="comment_again">

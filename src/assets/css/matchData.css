@@ -24,9 +24,6 @@
 .router-link-active {
   border-bottom: 4px solid #B99D6F;
 }
-#saiqu_a {
-
-}
 
 #rank_player {
   margin-left:13px;
@@ -164,6 +161,7 @@
 
 .team_photo {
   width: 35px;
+  height: 35px;
   display:inline-block;
   vertical-align: middle;
 }
