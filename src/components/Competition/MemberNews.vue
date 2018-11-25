@@ -1,31 +1,17 @@
 <template>
     <div>
-      <div class="msg_hot">
+      <div class="msg_hot" v-for="msg in msgs">
         <div class="msg_left">
-          <p>OMG.xiyang迎来自己LPL赛场的第300场比赛</p>
+          <p>{{msg.title}}</p>
           <span class="msg_left_time">
-            2018-9-18
+            {{msg.time}}
           </span>
           <span class="msg_left_num">
-            1.7万阅读量
+            {{msg.readTime}}
           </span>
         </div>
         <div class="msg_right">
-          <img src="../../assets/img/team_a1.png" alt="">
-        </div>
-      </div>
-      <div class="msg_hot">
-        <div class="msg_left">
-          <p>Smlz赛后与xiyang聚餐 与老队友感情依旧</p>
-          <span class="msg_left_time">
-            2018-9-18
-          </span>
-          <span class="msg_left_num">
-            1.7万阅读量
-          </span>
-        </div>
-        <div class="msg_right">
-          <img src="../../assets/img/team_a3.png" alt="">
+          <img :src="msg.img" alt="">
         </div>
       </div>
     </div>
@@ -33,7 +19,31 @@
 
 <script>
     export default {
-        name: "MemberNews"
+        name: "MemberNews",
+        data() {
+            return {
+                msgs:[
+                    {
+                        title: 'OMG.xiyang迎来自己LPL赛场的第300场比赛',
+                        time: '2018-9-18',
+                        readTime: '1.7万阅读量',
+                        img: '/static/team_a1.png'
+                    },
+                    {
+                        title: 'Smlz赛后与xiyang聚餐 与老队友感情依旧',
+                        time: '2018-9-18',
+                        readTime: '1.7万阅读量',
+                        img: '/static/team_a3.png'
+                    },
+                    {
+                        title: 'Smlz赛后与xiyang聚餐 与老队友感情依旧',
+                        time: '2018-9-18',
+                        readTime: '1.7万阅读量',
+                        img: '/static/team_a3.png'
+                    }
+                ]
+            }
+        }
     }
 </script>
 

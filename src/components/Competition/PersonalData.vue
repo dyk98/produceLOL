@@ -2,20 +2,14 @@
   <div>
     <div class="hero">
       <p>常用英雄</p>
-      <ul class="hero1">
-        <li><img src="../../assets/img/q.png" alt=""></li>
-        <li><img src="../../assets/img/s.png" alt=""></li>
-        <li><img src="../../assets/img/d.png" alt=""></li>
-        <li><img src="../../assets/img/f.png" alt=""></li>
-        <li><img src="../../assets/img/g.png" alt=""></li>
-        <li><img src="../../assets/img/h.png" alt=""></li>
-        <li><img src="../../assets/img/j.png" alt=""></li>
+      <ul class="hero1" >
+        <li v-for="img in heroImgs"><img :src="img.address" alt=""></li>
       </ul>
     </div>
     <div class="data">
       <p class="dataP">赛事数据</p>
-      <div class="dataDetail">
-        <p class="match_name">淘汰赛春季赛常规赛</p>
+      <div class="dataDetail" v-for="msg in msgs">
+        <p class="match_name">{{msgs.title}}</p>
         <div class="dataNum">
           <div class="line1">
             <p>出场次数 </p>
@@ -24,43 +18,18 @@
             <p>总死亡(场均)</p>
           </div>
           <div class="line2">
-            <p>1</p>
-            <p>4（4.00）</p>
-            <p>3（3.00)</p>
-            <p>8（8.00）</p>
+            <p>{{msg.time}}</p>
+            <p>{{msg.K}}</p>
+            <p>{{msg.A}}</p>
+            <p>{{msg.D}}</p>
           </div>
           <div class="line1">
             <p>KDA </p>
             <p>MVP次数</p>
           </div>
           <div class="line2">
-            <p>0.80</p>
-            <p>0</p>
-          </div>
-        </div>
-      </div>
-      <div class="dataDetail">
-        <p class="match_name">淘汰赛春季赛常规赛</p>
-        <div class="dataNum">
-          <div class="line1">
-            <p>出场次数 </p>
-            <p>总击杀(场均)</p>
-            <p>总助攻(场均)</p>
-            <p>总死亡(场均)</p>
-          </div>
-          <div class="line2">
-            <p>1</p>
-            <p>4（4.00）</p>
-            <p>3（3.00)</p>
-            <p>8（8.00）</p>
-          </div>
-          <div class="line1">
-            <p>KDA </p>
-            <p>MVP次数</p>
-          </div>
-          <div class="line2">
-            <p>0.80</p>
-            <p>0</p>
+            <p>{{msg.KPA}}</p>
+            <p>{{msg.MVPTime}}</p>
           </div>
         </div>
       </div>
@@ -71,7 +40,63 @@
 
 <script>
     export default {
-        name: "PersonalData"
+        name: "PersonalData",
+        data() {
+            return{
+                heroImgs:[
+                    {
+                        address: '/static/q.png'
+                    },
+                    {
+                        address: '/static/s.png'
+                    },
+                    {
+                        address: '/static/d.png'
+                    },
+                    {
+                        address: '/static/f.png'
+                    },
+                    {
+                        address: '/static/g.png'
+                    },
+                    {
+                        address: '/static/h.png'
+                    },
+                    {
+                        address: '/static/j.png'
+                    }
+                ],
+                msgs:[
+                    {
+                        title: '淘汰赛春季赛常规赛',
+                        time: '1',
+                        K: '4（4.00）',
+                        D: '8（8.00）',
+                        A: '3（3.00)',
+                        KPA: '0.80',
+                        MVPTime: '0'
+                    },
+                    {
+                        title: '淘汰赛春季赛常规赛',
+                        time: '1',
+                        K: '4（4.00）',
+                        D: '8（8.00）',
+                        A: '3（3.00)',
+                        KPA: '0.80',
+                        MVPTime: '0'
+                    },
+                    {
+                        title: '淘汰赛春季赛常规赛',
+                        time: '1',
+                        K: '4（4.00）',
+                        D: '8（8.00）',
+                        A: '3（3.00)',
+                        KPA: '0.80',
+                        MVPTime: '0'
+                    }
+        ]
+        }
+        }
     }
 </script>
 

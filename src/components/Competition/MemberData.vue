@@ -5,8 +5,8 @@
           <img src="../../assets/img/wback.png" alt="" class="wback">
         </router-link>
         <img src="../../assets/img/omg/xiyang.png" alt="" class="headCenter">
-        <p class="memberName">xiyang/杨彬</p>
-        <p class="memberPosition">OMG 上单</p>
+        <p class="memberName">{{name}}</p>
+        <p class="memberPosition">{{type}}</p>
       </div>
       <div class="column">
         <div>
@@ -27,7 +27,13 @@
 
 <script>
     export default {
-        name: "MemberData"
+        name: "MemberData",
+        data() {
+            return {
+                name: 'xiyang/杨彬',
+                type: 'OMG 上单'
+            }
+        }
     }
 </script>
 
