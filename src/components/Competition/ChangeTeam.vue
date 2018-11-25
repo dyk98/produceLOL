@@ -29,7 +29,8 @@
       <div class="bg">
 
       </div>
-      <div style="position: absolute; top: 20px; left: 15px"><img style="width: 20px" src="../../assets/img/out.png" alt="" @click="showteam"></div>
+      <div style="position: absolute; top: 20px; left: 15px"><img style="width: 20px" src="../../assets/img/out.png" alt="" @click="showteam">
+      </div>
 
       <span>
     <div class="zone" >

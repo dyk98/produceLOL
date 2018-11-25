@@ -1,36 +1,43 @@
 <template>
     <div class="page">
+
       <div class="header">
+
         <div class="header_top">
           <router-link class="back" to="/Discuss">
-            <img src="../../assets/img/back.png" alt="">
+            <img :src="back" alt="">
           </router-link>
-          <p>
-            Rng粉丝鸭血汤
+          <p class="title">
+            {{circle.name}}
           </p>
           <router-link class="add" to="/ArticleAdd" tag="div">
-            <img src="../../assets/img/add.png" alt="">
+            <img :src="add" alt="">
           </router-link>
         </div>
+
+
         <div class="header_center">
-          <img src="../../assets/img/rng.png" alt="">
-          <p>发帖量348</p>
-          <p class="p_bottom">关注人数4563</p>
+          <img :src="circle.img" alt="">
+          <p>{{circle.article}}</p>
+          <p class="p_bottom">{{circle.people}}</p>
           <button @click="toggle()" ref="btn" :class="{'black':isBlack,'golden':!isBlack}" v-model="btnInner">
             {{btnInner}}
           </button>
         </div>
+
+
         <div class="search">
           <input type="text" value="" id="input_search">
-          <img src="../../assets/img/search.png" alt="" class="search_left">
-          <img src="../../assets/img/out.png" alt="" class="search_right" @click="clear">
+          <img :src="search" alt="" class="search_left">
+          <img :src="out" alt="" class="search_right" @click="clear">
         </div>
       </div>
+
+
       <div class="content">
         <div class="column">
           <router-link to="/DiscussDetail/DiscussAll" :class="{'line':!ro}" @click.native="active">全部</router-link>
           <router-link to="/DiscussDetail/DiscussWell" :class="{'line':ro}" @click.native="active">精选</router-link>
-          <!--<router-link>精选</router-link>-->
         </div>
         <div>
           <router-view></router-view>
@@ -49,6 +56,16 @@
           isBlack: false,
           // _btnInner:'关注'
           ro: false,
+          back:'/static/back.png',
+          add:'/static/add.png',
+          search:'/static/search.png',
+          out:'/static/out.png',
+          circle:{
+              name:'RNG粉丝鸭血汤',
+              img:'/static/rng.png',
+              article:'发帖量348',
+              people:'关注人数4563',
+          }
 
         }
       },
@@ -121,6 +138,15 @@
     font-size: 18px;
     margin-top: 15px;
   }
+
+  .title {
+    position: fixed;
+    width: 50%;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 15px;
+  }
+
   .header .header_center {
     height: 70px;
     width: 93%;

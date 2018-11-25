@@ -44,212 +44,224 @@ import LckData from '@/components/Data/LckData'
 import Person from '@/components/Person'
 import Login from '@/components/Login'
 import EdgMsg from '@/components/Competition/EdgMsg'
+import Sign from '@/components/Sign'
+import SelectCircle from '@/components/SelectCircle'
+import SelectTeam from '@/components/SelectTeam'
 
 
-
-
-
-
-
-
-Vue.component('Header',Header);
-Vue.component('Footer',Footer);
-Vue.component('Slider',Slider);
+Vue.component('Header', Header);
+Vue.component('Footer', Footer);
+Vue.component('Slider', Slider);
 
 
 Vue.use(Router);
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'HomeHot',
-      component: HomeHot
-    },
-    {
-      path: '/Person',
-      name: 'Person',
-      component: Person
-    },
-    {
-      path: '/Test',
-      name: 'Test',
-      component: Test
-    },
-    {
-      path: '/ChangeGame',
-      name: 'ChangeGame',
-      component: ChangeGame
-    },
-    {
-      path: '/HomeMsg',
-      name: 'HomeMsg',
-      component: HomeMsg
-    },
-    {
-      path: '/Guide',
-      name: 'Guide',
-      component: Guide
-    },
-    {
-      path: '/Entertainment',
-      name: 'Entertainment',
-      component: Entertainment
-    },
-    {
-      path: '/Product',
-      name: 'Product',
-      component: Product
-    },
-    {
-      path: '/Discuss',
-      name: 'Discuss',
-      component: Discuss
-    },
-    {
-      path: '/ArticleAdd',
-      name: 'ArticleAdd',
-      component: ArticleAdd
-    },
-    {
-      path: '/DiscussDetail',
-      name: 'DiscussDetail',
-      component: DiscussDetail,
-      redirect:'/DiscussDetail/DiscussAll',
-      children:[
+    routes: [
         {
-          path: '/DiscussDetail/DiscussAll',
-          name: 'DiscussAll',
-          component: DiscussAll,
+            path: '/',
+            name: 'HomeHot',
+            component: HomeHot
         },
         {
-          path: '/DiscussDetail/DiscussWell',
-          name: 'DiscussWell',
-          component: DiscussWell,
+            path: '/Person',
+            name: 'Person',
+            component: Person
+        },
+        {
+            path: '/Test',
+            name: 'Test',
+            component: Test
+        },
+        {
+            path: '/ChangeGame',
+            name: 'ChangeGame',
+            component: ChangeGame
+        },
+        {
+            path: '/HomeMsg',
+            name: 'HomeMsg',
+            component: HomeMsg
+        },
+        {
+            path: '/Guide',
+            name: 'Guide',
+            component: Guide
+        },
+        {
+            path: '/Entertainment',
+            name: 'Entertainment',
+            component: Entertainment
+        },
+        {
+            path: '/Product',
+            name: 'Product',
+            component: Product
+        },
+        {
+            path: '/Discuss',
+            name: 'Discuss',
+            component: Discuss
+        },
+        {
+            path: '/ArticleAdd',
+            name: 'ArticleAdd',
+            component: ArticleAdd
+        },
+        {
+            path: '/DiscussDetail',
+            name: 'DiscussDetail',
+            component: DiscussDetail,
+            redirect: '/DiscussDetail/DiscussAll',
+            children: [
+                {
+                    path: '/DiscussDetail/DiscussAll',
+                    name: 'DiscussAll',
+                    component: DiscussAll,
+                },
+                {
+                    path: '/DiscussDetail/DiscussWell',
+                    name: 'DiscussWell',
+                    component: DiscussWell,
+                }
+            ]
+        },
+        {
+            path: '/DetailArticle',
+            name: 'DetailArticle',
+            component: DetailArticle,
+        },
+        {
+            path: '/DetailArticle1',
+            name: 'DetailArticle1',
+            component: DetailArticle1,
+        },
+        {
+            path: '/DetailArticle2',
+            name: 'DetailArticle2',
+            component: DetailArticle2,
+        },
+        {
+            path: '/DetailArticle3',
+            name: 'DetailArticle3',
+            component: DetailArticle3,
+        },
+        {
+            path: '/Competition',
+            name: 'Competition',
+            component: Competition,
+            redirect: '/Competition/CompetitionMsg',
+            children: [
+                {
+                    path: '/Competition/CompetitionMsg',
+                    name: 'CompetitionMsg',
+                    component: CompetitionMsg,
+                },
+                {
+                    path: '/Competition/CompetitionData',
+                    name: 'CompetitionData',
+                    component: CompetitionData,
+                },
+                {
+                    path: '/Competition/CompetitionMes',
+                    name: 'CompetitionMes',
+                    component: CompetitionMes,
+                },
+                {
+                    path: '/Competition/CompetitionMember',
+                    name: 'CompetitionMember',
+                    component: CompetitionMember,
+                },
+                {
+                    path: '/Competition/CompetitionTime',
+                    name: 'CompetitionTime',
+                    component: CompetitionTime,
+                },
+            ]
+        },
+        {
+            path: '/ChangeTeam',
+            name: 'ChangeTeam',
+            component: ChangeTeam,
+            redirect: '/ChangeTeam/EdgMsg',
+            children: [
+                {
+                    path: '/ChangeTeam/EdgMsg',
+                    name: 'EdgMsg',
+                    component: EdgMsg,
+                }
+            ]
+        },
+        {
+            path: '/VideoHome',
+            name: 'VideoHome',
+            component: VideoHome,
+        },
+        {
+            path: '/VideoDetail',
+            name: 'VideoDetail',
+            component: VideoDetail,
+        },
+        {
+            path: '/MemberData',
+            name: 'MemberData',
+            component: MemberData,
+            redirect: '/MemberData/MemberNews',
+            children: [
+                {
+                    path: '/MemberData/MemberNews',
+                    name: 'MemberNews',
+                    component: MemberNews,
+                },
+                {
+                    path: '/MemberData/PersonalData',
+                    name: 'PersonalData',
+                    component: PersonalData,
+                },
+                {
+                    path: '/MemberData/CompetitionHis',
+                    name: 'CompetitionHis',
+                    component: CompetitionHis,
+                },
+            ]
+        },
+        {
+            path: '/Data',
+            name: 'Data',
+            component: Data,
+            redirect: '/Data/LplData',
+            children: [
+                {
+                    path: '/Data/LplData',
+                    name: 'LplData',
+                    component: LplData,
+                },
+                {
+                    path: '/Data/LckData',
+                    name: 'LckData',
+                    component: LckData,
+                },
+            ]
+        },
+        {
+            path: '/Login',
+            name: 'Login',
+            component: Login,
+        },
+        {
+            path: '/Sign',
+            name: 'Sign',
+            component: Sign,
+        },
+        {
+            path: '/SelectCircle',
+            name: 'SelectCircle',
+            component: SelectCircle,
+        },
+        {
+            path: '/SelectTeam',
+            name: 'SelectTeam',
+            component: SelectTeam,
         }
-      ]
-    },
-    {
-      path: '/DetailArticle',
-      name: 'DetailArticle',
-      component: DetailArticle,
-    },
-    {
-      path: '/DetailArticle1',
-      name: 'DetailArticle1',
-      component: DetailArticle1,
-    },
-    {
-      path: '/DetailArticle2',
-      name: 'DetailArticle2',
-      component: DetailArticle2,
-    },
-    {
-      path: '/DetailArticle3',
-      name: 'DetailArticle3',
-      component: DetailArticle3,
-    },
-    {
-      path: '/Competition',
-      name: 'Competition',
-      component: Competition,
-      redirect:'/Competition/CompetitionMsg',
-      children: [
-        {
-          path: '/Competition/CompetitionMsg',
-          name: 'CompetitionMsg',
-          component: CompetitionMsg,
-        },
-        {
-          path: '/Competition/CompetitionData',
-          name: 'CompetitionData',
-          component: CompetitionData,
-        },
-        {
-          path: '/Competition/CompetitionMes',
-          name: 'CompetitionMes',
-          component: CompetitionMes,
-        },
-        {
-          path: '/Competition/CompetitionMember',
-          name: 'CompetitionMember',
-          component: CompetitionMember,
-        },
-        {
-          path: '/Competition/CompetitionTime',
-          name: 'CompetitionTime',
-          component: CompetitionTime,
-        },
-      ]
-    },
-    {
-      path: '/ChangeTeam',
-      name: 'ChangeTeam',
-      component: ChangeTeam,
-      redirect:'/ChangeTeam/EdgMsg',
-      children:[
-        {
-          path: '/ChangeTeam/EdgMsg',
-          name: 'EdgMsg',
-          component: EdgMsg,
-        }
-      ]
-    },
-    {
-      path: '/VideoHome',
-      name: 'VideoHome',
-      component: VideoHome,
-    },
-    {
-      path: '/VideoDetail',
-      name: 'VideoDetail',
-      component: VideoDetail,
-    },
-    {
-      path: '/MemberData',
-      name: 'MemberData',
-      component: MemberData,
-      redirect:'/MemberData/MemberNews',
-      children:[
-        {
-          path: '/MemberData/MemberNews',
-          name: 'MemberNews',
-          component: MemberNews,
-        },
-        {
-          path: '/MemberData/PersonalData',
-          name: 'PersonalData',
-          component: PersonalData,
-        },
-        {
-          path: '/MemberData/CompetitionHis',
-          name: 'CompetitionHis',
-          component: CompetitionHis,
-        },
-      ]
-    },
-    {
-      path: '/Data',
-      name: 'Data',
-      component: Data,
-      redirect:'/Data/LplData',
-      children:[
-        {
-          path: '/Data/LplData',
-          name: 'LplData',
-          component: LplData,
-        },
-        {
-          path: '/Data/LckData',
-          name: 'LckData',
-          component: LckData,
-        },
-      ]
-    },
-    {
-      path: '/Login',
-      name: 'Login',
-      component: Login,
-    },
-  ]
+    ]
 })

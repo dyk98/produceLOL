@@ -2,38 +2,21 @@
     <div>
       <div class="head">
         <router-link tag="div" to="/" class="rightDiv">
-          <img src="../assets/img/out.png" alt="" class="right">
+          <img :src="person.out" alt="" class="right">
         </router-link>
         <router-link tag="div" to="/Login" class="leftDiv">
-          <img src="../assets/img/head.png" alt="" class="left">
+          <img :src="person.head" alt="" class="left">
         </router-link>
-
-        <p>用户名</p>
+        <p>{{person.name}}</p>
       </div>
-      <div class="menu">
+      <div v-for="content in contents" class="menu">
         <div class="line">
-          <img src="../assets/img/person.png" alt="">
-          <p>账号</p>
-        </div>
-        <div class="line">
-          <img src="../assets/img/msg.png" alt="">
-          <p>消息管理</p>
-        </div>
-        <div class="line">
-          <img src="../assets/img/eye.png" alt="">
-          <p>我的关注</p>
-        </div>
-        <div class="line">
-          <img src="../assets/img/send.png" alt="">
-          <p>发布中心</p>
-        </div>
-        <div class="line">
-          <img src="../assets/img/out1.png" alt="">
-          <p>退出登录</p>
+          <img :src="content.img" alt="">
+          <p>{{content.p}}</p>
         </div>
       </div>
       <div class="bottom">
-        <img src="../assets/img/set.png" alt="">
+        <img :src="person.set" alt="">
         <p class="p_left">设置</p>
         <p class="p_right">关于我们</p>
       </div>
@@ -42,7 +25,37 @@
 
 <script>
     export default {
-        name: "Person"
+        name: "Person",
+        data(){
+            return{
+                person:{
+                    out:'/static/out.png',
+                    head:'/static/head.png',
+                    set:'/static/set.png',
+                    name:'用户名'
+                },
+                contents:[
+                    {
+                        img:'/static/person.png',
+                        p:'账号'
+                    },{
+                        img:'/static/msg.png',
+                        p:'消息管理'
+                    },{
+                        img:'/static/eye.png',
+                        p:'我的关注'
+                    },{
+                        img:'/static/send.png',
+                        p:'发布中心'
+                    },{
+                        img:'/static/out1.png',
+                        p:'退出登录'
+                    }
+                ],
+                head:'/static/head.png',
+            }
+        },
+
     }
 </script>
 

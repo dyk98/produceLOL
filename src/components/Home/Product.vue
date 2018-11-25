@@ -1,11 +1,13 @@
 <template>
   <div class="page">
     <Header :game="game" :pro="pro"></Header>
+
+
     <div class="content">
       <div class="msg_hot">
         <div class="msg_left">
           <img src="../../assets/img/top.png" alt="">
-          <p>按时大苏打飒飒打撒萨达阿三打算啊实打实打算大苏打飒飒按时大苏打飒飒实打实按时大苏打飒飒</p>
+          <p>周边信息</p>
           <span class="msg_left_time">
             2018-9-18
           </span>
@@ -18,6 +20,8 @@
         </div>
       </div>
     </div>
+
+
     <Footer :home_gol="gol" :discuss_gol="discuss_gol" :match_gol="match_gol" :data_gol="data_gol"></Footer>
 
   </div>

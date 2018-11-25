@@ -1,12 +1,13 @@
 <template>
     <div class="note" id="login_body">
-        <img style="width: 100%; height:100%; position:fixed; left:0; top:0; bottom: 0; z-index:-1;" src="../assets/img/loginbg.png"/>
-        <div style="position: fixed;top: 20px;left: 20px;">
-            <img src="../assets/img/back.png" alt="" class="back" @click="backRouter">
+        <img style="width: 100%; height:100%; position:fixed; left:0; top:0; bottom: 0; z-index:-1;"
+             :src="bg"/>
+        <div style="position: fixed;top: 20px;left: 20px;" @click="backhome">
+            <img :src="back" alt="" class="back">
         </div>
 
-        <div style="position: fixed; width: 100%">
-            <div style="height: 200px; width: 100%;display: block"></div>
+
+        <div style="margin-top: 150px; width: 100%">
             <div>
                 <input type="text" class="loginInput inputName" placeholder="请输入您的用户名" id="name">
             </div>
@@ -15,7 +16,7 @@
             </div>
             <div>
                 <a class="loginP forgetPass">忘记密码</a>
-                <a class="loginP register">注册账号</a>
+                <a class="loginP register" @click="sign">注册账号</a>
             </div>
             <div>
                 <button class="loginButton" @click="checkUser">登陆</button>
@@ -24,11 +25,11 @@
 
         <div style="top: 80%; position: fixed; width: 100%; height: 20% ;">
             <div class="loginLogo tencent" @click="quickLogin">
-                <img src="../assets/img/tencentqq.png" class="qqtim" alt="">
+                <img :src="tencentqq" class="qqtim" alt="">
                 <a href="" class="quickLogin">QQ登录</a>
             </div>
             <div class="loginLogo wechat" @click="quickLogin">
-                <img src="../assets/img/wechatlogo.png" class="wechat" alt="">
+                <img :src="wechatlogo" class="wechat" alt="">
                 <a href="" class="quickLogin">微信登录</a>
             </div>
         </div>
@@ -41,15 +42,10 @@
         name: "login",
         data() {
             return {
-                note: {
-                    background: "url(" + require("../assets/img/loginbg.png") + ")  no-repeat fixed ",
-                    backgroundSize: "100% 100%",
-                    textAlign: "center",
-                    // paddingBottom: "30%",
-                    // paddingLeft:"24%",
-                    overflow: "hidden",
-                    margin: "0 auto"
-                }
+                bg: '/static/loginbg.png',
+                back: '/static/back.png',
+                tencentqq: '/static/tencentqq.png',
+                wechatlogo: '/static/wechatlogo.png'
             }
         },
         created() {
@@ -58,20 +54,53 @@
         },
         methods: {
             checkUser: function () {
+                var a = this;
+
                 var name = document.getElementById('name').value;
                 var password = document.getElementById('password').value;
-                if (name === "test123" && password === 'test123') {
-                    alert('登陆成功');
-                    this.$router.push({path: '/'})
+
+
+                if (name === "" || password === "") {
+                    alert('您有信息未输完');
                 } else {
-                    alert('用户名或密码错误');
+                    this.$http.get('http://39.106.102.208:8889/hbws/login.php', {
+
+                        params: {
+                            username: name,
+                            password: password
+                        }
+
+                    }).then(function (aaa) {
+                        console.log(aaa);
+
+                        if (aaa.data.result === "false") {
+                            alert("该用户名未被注册");
+                        } else {
+                            if (aaa.data.msg.password === password){
+                                alert('登录成功');
+                                a.$router.push({path: '/'});
+                            }else {
+                                alert('用户名或密码错误');
+                            }
+
+                        }
+
+                    })
+                        .catch(function (bbb) {
+                                console.log(bbb)
+                            }
+                        )
+
                 }
             },
             quickLogin: function () {
                 alert('授权登录暂未开放')
             },
-            backRouter() {
-                this.$router.back(-1)
+            sign() {
+                this.$router.push({path: '/sign'})
+            },
+            backhome() {
+                this.$router.push({path: '/'})
             }
         },
     }
@@ -110,7 +139,6 @@
         font-size: 15px;
     }
 
-
     .loginInput {
         background-color: rgba(255, 255, 255, 0);
         border: none;
@@ -144,6 +172,7 @@
         border-radius: 5px;
         color: white;
         width: 20%;
+        outline: none;
         margin-top: 7%;
     }
 
@@ -164,12 +193,12 @@
     }
 
     .qqtim {
-        height: 50px;
+
         width: 50px;
     }
 
     .wechat {
-        height: 50px;
+
         width: 50px;
     }
 </style>

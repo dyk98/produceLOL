@@ -3,12 +3,13 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import axios from 'axios'
 import'jquery'
 import '../node_modules/swiper/dist/css/swiper.css'
 
+Vue.prototype.$http = axios;
 
-
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
 // let router = new VueRouter({
@@ -21,5 +22,5 @@ new Vue({
   router,
   components: { App },
   template: '<App/>'
-})
+});
 

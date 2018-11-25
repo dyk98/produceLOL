@@ -1,0 +1,182 @@
+.ranking {
+  font-size: 14px;
+}
+
+.rank_saiqu {
+  padding: 5px 0;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #EAEAEA;
+  border-top: 1px solid #EAEAEA;
+  margin-bottom: 10px;
+}
+
+.saiqu {
+  width: 40px;
+  height: 40px;
+  /*border-bottom: 4px solid #EAEAEA;*/
+}
+.saiquDiv {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+.router-link-active {
+  border-bottom: 4px solid #B99D6F;
+}
+
+#rank_player {
+  margin-left:13px;
+}
+
+.show {
+  width: 20px;
+  vertical-align:middle;
+  display:inline-block;
+  margin-left:13px;
+}
+
+#one {
+  width: 20px;
+  height: 20px;
+  background: #DB9D28;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  color: #FFFFFF;
+}
+.player_photo {
+  width: 60px;
+  vertical-align:middle;
+}
+
+.team_logo {
+  width: 35px;
+  display:inline-block;
+  vertical-align: top;
+  margin-left: 30px;
+}
+
+.player_name {
+  display:inline-block;
+  vertical-align: bottom;
+  margin-left: -40px;
+}
+
+.r_heng {
+  width: 90%;
+  margin: 0 auto;
+  height: 1px;
+  background: #EAEAEA;
+}
+
+#two {
+  width: 20px;
+  height: 20px;
+  background: #DC6A23;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+#three {
+  width: 20px;
+  height: 20px;
+  background: #A8A044;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.then {
+  width: 20px;
+  height: 20px;
+  background: #A5A5A5;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.more {
+  width: 15px;
+  vertical-align:middle;
+  display: inline-block;
+}
+
+.showmore {
+  margin: 5px auto;
+  text-align: center;
+}
+
+.where {
+  display: flex;
+  justify-content: space-around;
+}
+
+#east {
+  color: #B99D6F;
+}
+
+.duan {
+  width: 20px;
+  height: 3px;
+  margin-top: 3px;
+}
+
+#east_{
+  background: #B99D6F;
+}
+
+.thead {
+  display: flex;
+  justify-content: space-around;
+  background: #F1F1F1;
+  height: 28px;
+  line-height: 28px;
+  padding: 0;
+}
+
+.tbody {
+  display: flex;
+  justify-content: space-around;
+  padding: 3px 0;
+  height: 35px;
+  line-height: 35px;
+  vertical-align: middle;
+}
+
+.team_order {
+  background: #F1F1F1;
+  text-align: center;
+  color: #A5A5A5;
+  width: 25px;
+  border-radius: 50%;
+  display: inline-block;
+  height: 25px;
+  line-height: 25px;
+}
+
+.team_photo {
+  width: 35px;
+  height: 35px;
+  display:inline-block;
+  vertical-align: middle;
+}
+
+.t_font {
+  font-size: 20px;
+  color: #A5A5A5;
+  font-weight: bold;
+  flex: 1;
+  text-align: center;
+}
+
+.t_heng {
+  width: 100%;
+  margin: 0 auto;
+  height: 1px;
+  background: #EAEAEA;
+}

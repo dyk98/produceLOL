@@ -1,29 +1,13 @@
 <template>
   <div>
     <nav id="menu">
-      <h2 class="head"><img src="../assets/img/head.png" alt=""></h2>
-      <ul>
+      <h2 class="head"><img :src="head" alt=""></h2>
+      <ul v-for="content in contents">
         <li>
           <span>
-            <img src="../assets/img/person.png" alt="">
+            <img :src="content.img" alt="">
           </span>
-          <p>账号</p>
-        </li>
-        <li>
-          <img src="../assets/img/msg.png" alt="">
-          <p>消息管理</p>
-        </li>
-        <li>
-          <img src="../assets/img/eye.png" alt="">
-          <p>我的关注</p>
-        </li>
-        <li>
-          <img src="../assets/img/send.png" alt="">
-          <p>发布中心</p>
-        </li>
-        <li>
-          <img src="../assets/img/out1.png" alt="">
-          <p>退出登录</p>
+          <p>{{content.p}}</p>
         </li>
       </ul>
 
@@ -31,7 +15,7 @@
 
     <main id="panel">
       <header>
-        <button class="toggle-button"><img src="../assets/img/head.png" alt=""></button>
+        <button class="toggle-button"><img :src="head" alt=""></button>
       </header>
     </main>
   </div>
@@ -42,6 +26,29 @@
     import Slideout from 'slideout'
     export default {
       name: "Test",
+        data(){
+          return{
+              contents:[
+                  {
+                      img:'/static/person.png',
+                      p:'账号'
+                  },{
+                      img:'/static/msg.png',
+                      p:'消息管理'
+                  },{
+                      img:'/static/eye.png',
+                      p:'我的关注'
+                  },{
+                      img:'/static/send.png',
+                      p:'发布中心'
+                  },{
+                      img:'/static/out1.png',
+                      p:'退出登录'
+                  }
+              ],
+              head:'/static/head.png',
+          }
+        },
       mounted(){
         var slideout = new Slideout({
           'panel': document.getElementById('panel'),

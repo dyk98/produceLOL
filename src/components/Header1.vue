@@ -1,19 +1,19 @@
 <template>
   <div id="content">
     <a href="" class="head">
-      <img src="../assets/img/head.png" alt="">
+      <img :src="head" alt="">
     </a>
     <!--<p>-->
     <!--{{msg}}-->
     <!--</p>-->
 
-    <img src="/static/back.png" alt="" class="head_left">
+    <img :src="back" alt="" class="head_left">
     <img :src="game" alt="" class="game_name">
     <router-link tag="div" >
-      <img src="../assets/img/right.png" alt="" class="head_right">
+      <img :src="right" alt="" class="head_right">
     </router-link>
     <a href="" class="select">
-      <img src="../assets/img/search.png" alt="">
+      <img :src="search" alt="">
     </a>
     <!-- 栏目 -->
     <div class="column">
@@ -42,9 +42,12 @@
       'game':String
     },
     data() {
-      return {
-        // game:'../assets/img/lol.png'
-      }
+        return {
+            head:'/static/head.png',
+            back:'/static/back.png',
+            right:'/static/right.png',
+            search:'/static/search.png'
+        }
     }
   }
 </script>

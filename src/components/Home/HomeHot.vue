@@ -1,185 +1,168 @@
 <template>
-  <div class="page">
-    <Header :game="game" :hot="hot"></Header>
-    <div class="content">
-      <!-- 轮播图 -->
-      <Slider></Slider>
-      <!--  战队对战 -->
+    <div class="page">
+        <!--header-->
+        <Header :game="game" :hot="hot"></Header>
+        <!--content-->
+        <div class="content">
+            <!-- 轮播图 -->
+            <Slider></Slider>
+            <!--  战队对战 -->
 
-        <router-link tag="div"  to="/VideoDetail" class="match">
-          <div class="match_center">
-            <router-link class="team_left" to="">
-              <img src="../../assets/img/rng.png" alt="">
+            <router-link tag="div" to="/VideoDetail" class="match">
+                <div class="match_center">
+                    <router-link class="team_left" :to="match_team.path1"><img :src="match_team.team_left" alt="">
+                    </router-link>
+                    <p>{{match_team.p1}}</p>
+                    <router-link class="team_right" :to="match_team.path2"><img :src="match_team.team_right" alt="">
+                    </router-link>
+                </div>
+                <span><p>{{match_team.p2}}</p></span>
             </router-link>
-            <p>
-              对战
-            </p>
-            <router-link class="team_right" to="/Competition">
-              <img src="../../assets/img/omg/omg.png" alt="">
-            </router-link>
-          </div>
-          <span>
-          <p>
-            13:00
-          </p>
-          </span>
-        </router-link>
 
-      <!-- 资讯浏览 -->
-      <router-link tag="div" class="msg_hot" to="/DetailArticle2">
-        <div class="msg_left">
-          <img src="../../assets/img/top.png" alt="">
-          <p>2018英雄联盟全球总决赛入围赛即将到来</p>
-          <span class="msg_left_time">
-            2018-09-30
-          </span>
-          <span class="msg_left_num">
-            1.5万次阅读
-          </span>
+            <!-- 资讯浏览 -->
+
+            <router-link v-for="msg in msgs" :key="msg.index" tag="div" class="msg_hot" :to="msg.path">
+                <div class="msg_left">
+                    <img :src="msg.top" alt="">
+                    <p>{{msg.title}}</p>
+                    <span class="msg_left_time">{{msg.time}}</span>
+                    <span class="msg_left_num">{{msg.num}}</span>
+                </div>
+                <div class="msg_right">
+                    <img :src="msg.img" alt="">
+                </div>
+            </router-link>
+
         </div>
-        <div class="msg_right">
-          <img src="../../assets/img/home_a1.jpg" alt="">
-        </div>
-      </router-link>
-      <router-link tag="div" class="msg_hot" to="/DetailArticle3">
-        <div class="msg_left">
-          <p>"集卡兑换【龙的传人 乘龙御天】功能现已开启</p>
-          <span class="msg_left_time">
-            2018-09-28
-          </span>
-          <span class="msg_left_num">
-            4.8万次阅读
-          </span>
-        </div>
-        <div class="msg_right">
-          <img src="../../assets/img/home_a2.jpg" alt="">
-        </div>
-      </router-link>
-      <div class="msg_hot">
-        <div class="msg_left">
-          <p>8.19版本更新：世界赛版本正式来袭</p>
-          <span class="msg_left_time">
-              2018-09-26
-            </span>
-          <span class="msg_left_num">
-              3.5万次阅读
-            </span>
-        </div>
-        <div class="msg_right">
-          <img src="../../assets/img/home_a3.jpg" alt="">
-        </div>
-      </div>
-      <div class="msg_hot">
-        <div class="msg_left">
-          <p>雅加达 2018 珍藏纪念图标限时销售</p>
-          <span class="msg_left_time">
-              2018-09-30
-            </span>
-          <span class="msg_left_num">
-              2.6万次阅读
-            </span>
-        </div>
-        <div class="msg_right">
-          <img src="../../assets/img/home_a4.jpg" alt="">
-        </div>
-      </div>
-      <div class="msg_hot">
-        <div class="msg_left">
-          <p>2018全球总决赛解说宣传片《没有假如》</p>
-          <span class="msg_left_time">
-              2018-09-30
-            </span>
-          <span class="msg_left_num">
-              25.7万次阅读
-            </span>
-        </div>
-        <div class="msg_right">
-          <img src="../../assets/img/home_a5.jpg" alt="">
-        </div>
-      </div>
-      <div class="msg_hot">
-        <div class="msg_left">
-          <p>S8火热开打 幻联赛助威活动抢先看！</p>
-          <span class="msg_left_time">
-              2018-10-02
-            </span>
-          <span class="msg_left_num">
-              1.2万次阅读
-            </span>
-        </div>
-        <div class="msg_right">
-          <img src="../../assets/img/home_a6.jpg" alt="">
-        </div>
-      </div>
+        <!--footer-->
+        <Footer :home_gol="gol" :discuss_gol="discuss_gol" :match_gol="match_gol" :data_gol="data_gol"
+                :team="team"></Footer>
     </div>
-    <Footer :home_gol="gol" :discuss_gol="discuss_gol" :match_gol="match_gol" :data_gol="data_gol" :team="team"></Footer>
-  </div>
 </template>
 
 <script>
 
-  export default {
-    name: "HomeHot",
-    data () {
-      return {
-        home: '首页',
-        hot:'active',
-        discuss_gol : require('../../assets/img/discuss.png'),
-        gol : require('../../assets/img/home1.png'),
-        match_gol : require('../../assets/img/match.png'),
-        data_gol : require('../../assets/img/data.png'),
-        game : require('../../assets/img/lol.png'),
-        team:require('../../assets/img/omg/omg.png')
+    export default {
+        name: "HomeHot",
+        data() {
+            return {
+                home: '首页',
+                hot: 'active',
+                discuss_gol: '/static/discuss.png',
+                gol: '/static/home1.png',
+                match_gol: '/static/match.png',
+                data_gol: '/static/data.png',
+                game: '/static/lol.png',
+                team: '/static/omg/omg.png',
+                match_team: {
+                    team_left: '/static/rng.png',
+                    team_right: '/static/omg/omg.png',
+                    path1: '/Competition',
+                    path2: '/Competition',
+                    p1: '对战',
+                    p2: '13:00'
+                },
+                msgs: [
+                    {
+                        path: '/DetailArticle2',
+                        top: '/static/top.png',
+                        title: '2018英雄联盟全球总决赛入围赛即将到来',
+                        time: '2018-09-30',
+                        num: '1.5万次阅读',
+                        img:'/static/home_a1.jpg'
+                    },{
+                        path: '/DetailArticle3',
+                        top: '',
+                        title: '集卡兑换【龙的传人 乘龙御天】功能现已开启',
+                        time: '2018-09-30',
+                        num: '1.5万次阅读',
+                        img:'/static/home_a2.jpg'
+                    },{
+                        path: '/DetailArticle2',
+                        top: '',
+                        title: '8.19版本更新：世界赛版本正式来袭',
+                        time: '2018-09-30',
+                        num: '1.5万次阅读',
+                        img:'/static/home_a3.jpg'
+                    },{
+                        path: '/DetailArticle2',
+                        top: '',
+                        title: '雅加达 2018 珍藏纪念图标限时销售',
+                        time: '2018-09-30',
+                        num: '1.5万次阅读',
+                        img:'/static/home_a4.jpg'
+                    },{
+                        path: '/DetailArticle2',
+                        top: '',
+                        title: '2018全球总决赛解说宣传片《没有假如》',
+                        time: '2018-09-30',
+                        num: '1.5万次阅读',
+                        img:'/static/home_a5.jpg'
+                    },{
+                        path: '/DetailArticle2',
+                        top: '',
+                        title: 'S8火热开打 幻联赛助威活动抢先看！',
+                        time: '2018-09-30',
+                        num: '1.5万次阅读',
+                        img:'/static/home_a6.jpg'
+                    },
+                ]
 
-      }
+            }
+        }
     }
-  }
 </script>
 
 <style scoped>
-  @import "../../assets/css/information.css";
-  .content {
-    margin-top: 90px;
-  }
-  .match {
-    height: 50px;
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  .match .match_center {
-    width: 160px;
-    height: 50px;
-    margin: 0 auto;
-    text-align: center;
-    margin-top: 10px;
-  }
-  .match .match_center .team_left {
-    float: left;
-  }
-  .match .match_center  img {
-    width: 44px;
-    height: 50px;
-  }
-  .match .match_center p {
-    font-size: 14px;
-    display: inline-block;
-    height: 40px;
-    width: 50px;
-    line-height: 40px;
-    margin-top: 8px;
-  }
-  .match .match_center .team_right {
-    float: right;
-  }
-  .match span p {
-    margin: 0;
-    text-align: center ;
-    font-size: 14px;
-    color: #AAAAAA;
+    @import "../../assets/css/information.css";
 
-  }
+    .content {
+        margin-top: 90px;
+    }
 
+    .match {
+        height: 50px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
 
+    .match .match_center {
+        width: 160px;
+        height: 50px;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .match .match_center .team_left {
+        float: left;
+    }
+
+    .match .match_center img {
+        width: 44px;
+        height: 50px;
+    }
+
+    .match .match_center p {
+        font-size: 14px;
+        display: inline-block;
+        height: 40px;
+        width: 50px;
+        line-height: 40px;
+        margin-top: 8px;
+    }
+
+    .match .match_center .team_right {
+        float: right;
+    }
+
+    .match span p {
+        margin: 0;
+        text-align: center;
+        font-size: 14px;
+        color: #AAAAAA;
+
+    }
 
 
 </style>
